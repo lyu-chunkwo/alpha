@@ -1,0 +1,89 @@
+.about {
+  background-color: $conditions-bg;
+  padding: 70px 0 100px;
+
+  @media (max-width: 570px) {
+    padding: 50px 0 50px;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: 1150px) {
+      display: block;
+    }
+  }
+
+  &__item {
+    max-width: 540px;
+    margin-bottom: 95px;
+
+    @media (max-width: 1150px) {
+      margin: 0 auto 50px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__item-title {
+    margin-bottom: 45px;
+    position: relative;
+    z-index: 5;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 58px;
+      height: 60px;
+      left: 0;
+      bottom: -14px;
+      background-image: url(../images/ico/decor.svg);
+      z-index: -1;
+    }
+  }
+
+  &__img {
+    margin-bottom: -60px;
+    width: 540px;
+    height: 300px;
+    object-fit: cover;
+
+    @media (max-width: 570px) {
+      width: 90%;
+      margin: 0 auto;
+    }
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 1.5;
+    @extend %commissioner-400;
+    color: $top-menu;
+    padding: 30px 30px 0 0;
+    max-width: 503px;
+    background-color: $conditions-bg;
+    position: relative;
+    z-index: 5;
+
+    @media (max-width: 570px) {
+      //  margin: 0 auto;
+      width: 100%;
+      padding-left: 30px;
+    }
+
+    p {
+      margin-bottom: 35px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__left {
+    margin-bottom: 50px;
+  }
+}

@@ -1,0 +1,125 @@
+.everyone {
+  margin-bottom: 100px;
+
+  &__title {
+    margin-bottom: 45px;
+  }
+
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -12px;
+
+    @media (max-width: 1228px) {
+      justify-content: center;
+    }
+  }
+
+  &__item {
+    max-width: 384px;
+    position: relative;
+    margin: 0 12px 24px;
+
+    &:hover {
+      .everyone__round {
+        &::before {
+          background-color: transparent;
+          border: 1px solid $accent-green;
+          transition: all 0.5s;
+        }
+
+        &::after {
+          background-image: url(../images/png/right-arrow-green.png);
+        }
+      }
+    }
+
+    @media (max-width: 820px) {
+      max-width: 792px;
+      width: 100%;
+    }
+
+    &--wide {
+      max-width: 792px;
+    }
+  }
+
+  &__img-link {
+    display: block;
+  }
+
+  &__img {
+    border-radius: 10px 10px 0 0;
+    max-width: 384px;
+    width: 100%;
+    height: 196px;
+    object-fit: cover;
+
+    @media (max-width: 820px) {
+      max-width: 100%;
+    }
+
+    &--wide {
+      max-width: 792px;
+    }
+  }
+
+  &__round {
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 170px;
+    right: 25px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 44px;
+      height: 44px;
+      background-color: $accent-green;
+      border-radius: 50%;
+      top: 3px;
+      left: 3px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 17px;
+      height: 9px;
+      background-image: url(../images/png/right-arrow.png);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &__text-box {
+    padding: 28px 35px 40px;
+    border: 1px solid $everyone-border;
+    border-top: none;
+    border-radius: 0 0 10px 10px;
+  }
+
+  &__titlte-link {
+    font-size: 20px;
+    @extend %gilroy-700;
+    color: $top-menu;
+    margin-bottom: 12px;
+    display: inline-block;
+    @include text-limit;
+    -webkit-line-clamp: 1;
+  }
+
+  &__text-link {
+    font-size: 16px;
+    line-height: 1.5;
+    @extend %commissioner-400;
+    color: $top-menu;
+    @include text-limit;
+    -webkit-line-clamp: 2;
+  }
+}

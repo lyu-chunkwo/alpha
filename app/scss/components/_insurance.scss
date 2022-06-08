@@ -1,0 +1,108 @@
+.insurance-top {
+  background-image: url(../images/insurance/top-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  padding: 115px 0;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (max-width: 990px) {
+      display: block;
+    }
+  }
+
+  &__text-box {
+    color: #fff;
+    max-width: 600px;
+
+    @media (max-width: 990px) {
+      margin-bottom: 25px;
+      max-width: 100%;
+    }
+  }
+
+  &__title {
+    font-size: 48px;
+    @extend %gilroy-700;
+    margin-bottom: 20px;
+
+    @media (max-width: 990px) {
+      font-size: 36px;
+    }
+
+    @media (max-width: 470px) {
+      font-size: 24px;
+    }
+
+    @media (max-width: 350px) {
+      font-size: 21px;
+    }
+  }
+
+  &__text {
+    font-size: 18px;
+    line-height: 1.44;
+    @extend %commissioner-400;
+    @media (max-width: 470px) {
+      font-size: 15px;
+    }
+  }
+
+  &__form-box {
+    max-width: 385px;
+    padding: 40px 20px;
+    background-color: #fff;
+    border-radius: 5px;
+
+    @media (max-width: 990px) {
+      margin: 0 auto;
+    }
+  }
+
+  &__form-title {
+    font-size: 16px;
+    line-height: 1.37;
+    @extend %gilroy-700;
+    margin-bottom: 20px;
+  }
+
+  &__input {
+    max-width: 335px;
+    width: 100%;
+    height: 45px;
+    display: block;
+    margin-bottom: 10px;
+    padding: 0 15px;
+    border: 1px solid $calc-credit;
+    border-radius: 4px;
+    font-size: 15px;
+    line-height: 1.6;
+    @extend %commissioner-300;
+
+    &--num {
+      margin-bottom: 35px;
+    }
+  }
+
+  .register__consent-label {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__form-button {
+    width: 100%;
+    height: 45px;
+    border: none;
+    background-color: $accent-green;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #fff;
+    @extend %gilroy-500;
+    cursor: pointer;
+  }
+}

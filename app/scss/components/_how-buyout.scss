@@ -1,0 +1,102 @@
+.how-buyout {
+  padding: 70px 0;
+  background-color: $benefits-bg;
+
+  @media (max-width: 540px) {
+    padding: 35px 0 15px;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: 1200px) {
+      display: block;
+    }
+  }
+
+  &__item {
+    max-width: 350px;
+    display: flex;
+    background-image: url(../images/redeem/how/how-bg.png);
+    background-repeat: no-repeat;
+    background-position: left top;
+    padding-top: 20px;
+
+    @media (max-width: 1200px) {
+      max-width: 100%;
+      margin-bottom: 45px;
+    }
+  }
+
+  &__num {
+    font-size: 152px;
+    @extend %gilroy-700;
+    color: $accent-green;
+    line-height: 115px;
+    padding-top: 0;
+    margin-right: 35px;
+    padding-right: 15px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 35px;
+      height: 35px;
+      background-color: #f0f1f4;
+      border-radius: 50%;
+      right: 0;
+      top: 81px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 26px;
+      height: 26px;
+      background-color: #c0c5d4;
+      border-radius: 50%;
+      right: 5px;
+      top: 86px;
+    }
+
+    &--two,
+    &--three {
+      &::before {
+        right: 7px;
+      }
+
+      &::after {
+        right: 12px;
+      }
+    }
+  }
+
+  &__subtitle {
+    font-size: 20px;
+    @extend %gilroy-700;
+    color: $top-menu;
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 1.5;
+    @extend %commissioner-500;
+    color: $top-menu;
+    margin-bottom: 25px;
+  }
+
+  .register__btn {
+    width: 170px;
+
+    &--howbuyout {
+      height: 38px;
+    }
+  }
+}

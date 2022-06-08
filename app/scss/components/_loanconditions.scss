@@ -1,0 +1,136 @@
+.loanconditions {
+  padding: 60px 0 65px;
+  background-image: url(../images/content-img/credit-pattern.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+
+  &__title {
+    color: #fff;
+    margin-bottom: 35px;
+    width: 235px;
+    line-height: 1.4;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 -11px;
+  }
+
+  &__item {
+    max-width: 385px;
+    width: 100%;
+    background-color: #252c32;
+    margin: 0 11px 22px;
+    height: 290px;
+    border: 2px solid $accent-green;
+    border-radius: 10px;
+    padding: 20px 0 40px 95px;
+    color: #fff;
+    background-image: url(../images/bg/loanconditions-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: top left;
+    position: relative;
+
+    @media (max-width: 410px) {
+      padding-left: 75px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 32px;
+      top: 45px;
+      @media (max-width: 410px) {
+        left: 20px;
+      }
+    }
+
+    &--contribution {
+      &::before {
+        background-image: url(../images/png/loanconditions/1.png);
+        width: 34px;
+        height: 34px;
+      }
+    }
+
+    &--percent {
+      &::before {
+        background-image: url(../images/png/loanconditions/2.png);
+        width: 34px;
+        height: 34px;
+      }
+    }
+
+    &--approve {
+      &::before {
+        background-image: url(../images/png/loanconditions/3.png);
+        width: 32px;
+        height: 34px;
+      }
+    }
+
+    &--maxterm {
+      &::before {
+        background-image: url(../images/png/loanconditions/4.png);
+        width: 34px;
+        height: 34px;
+      }
+    }
+
+    &--maxsum {
+      &::before {
+        background-image: url(../images/png/loanconditions/5.png);
+        width: 34px;
+        height: 34px;
+      }
+    }
+
+    &--select {
+      &::before {
+        background-image: url(../images/png/loanconditions/6.png);
+        width: 29px;
+        height: 34px;
+      }
+    }
+
+    span {
+      display: block;
+      font-size: 60px;
+      line-height: 1.07;
+      @extend %gilroy-700;
+
+      @media (max-width: 410px) {
+        font-size: 48px;
+      }
+    }
+  }
+
+  &__text-middle {
+    padding-bottom: 25px;
+    position: relative;
+    margin-bottom: 20px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 50px;
+      height: 6px;
+      background-color: #fff;
+      bottom: 0;
+      left: 0;
+    }
+  }
+
+  &__text-bottom {
+    width: 225px;
+    font-size: 22px;
+    @extend %gilroy-400;
+
+    @media (max-width: 410px) {
+      font-size: 19px;
+    }
+  }
+}

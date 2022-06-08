@@ -1,0 +1,335 @@
+.elements {
+  padding: 90px 0 140px;
+  background-color: $benefits-bg;
+
+  &__title {
+    margin-bottom: 45px;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: 1090px) {
+      display: block;
+    }
+  }
+
+  &__list {
+    max-width: 386px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 23px;
+    grid-row-gap: 23px;
+
+    @media (max-width: 1424px) {
+      max-width: 100%;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 1230px) {
+      margin-right: 15px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    @media (max-width: 1090px) {
+      margin-right: 0;
+      margin-bottom: 23px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__img {
+    @media (max-width: 1424px) {
+      display: none;
+    }
+  }
+
+  &__tooltip {
+    width: 180px;
+    background-color: #fff;
+    padding: 23px 23px;
+    display: flex;
+    align-items: flex-end;
+    font-size: 16px;
+    @extend %gilroy-700;
+    color: $top-menu;
+    border-radius: 10px;
+    position: relative;
+    background-image: url(../images/auto-select/info-green.png);
+    background-repeat: no-repeat;
+    background-position: 93% 9%;
+    transition: all 0.3s;
+
+    @media (max-width: 1230px) {
+      width: 280px;
+    }
+
+    @media (max-width: 1210px) {
+      width: 250px;
+    }
+
+    @media (max-width: 1090px) {
+      width: 100%;
+    }
+
+    &:hover {
+      background-image: url(../images/auto-select/info-grey.png);
+      color: $accent-green;
+    }
+
+    &:hover .elements__tooltip-text::before {
+      background-color: $accent-green;
+      transition: all 0.3s;
+    }
+
+    &--last {
+      grid-column-start: 2;
+    }
+  }
+
+  &__info-img {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+  }
+
+  &__tooltip .elements__tooltiptext-box {
+    visibility: hidden;
+    position: absolute;
+    top: -100px;
+    left: 10px;
+    width: 283px;
+    background-color: $accent-green;
+    color: #fff;
+    font-size: 13px;
+    line-height: 1.4;
+    @extend %commissioner-300;
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 1;
+    opacity: 0;
+
+    @media (max-width: 1424px) {
+      width: 180px;
+      left: 0px;
+      padding: 10px;
+      max-height: 92px;
+    }
+
+    @media (max-width: 1090px) {
+      visibility: visible;
+      opacity: 1;
+      width: 50%;
+      left: 130px;
+      top: 30px;
+      background-color: transparent;
+      color: $top-menu;
+      font-size: 15px;
+      font-weight: 400;
+    }
+
+    @media (max-width: 460px) {
+     top: 10px;
+     font-size: 14px;
+     left: 105px;
+    }
+  }
+
+  &__tooltip .elements__tooltiptext-box::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 30%;
+    margin-left: -8px;
+    border-width: 8px;
+    border-style: solid;
+    border-color: $accent-green transparent transparent transparent;
+
+    @media (max-width: 1090px) {
+      border-color: transparent;
+    }
+  }
+
+  &__tooltip:hover .elements__tooltiptext-box {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.5s;
+    transition-property: opacity;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+  }
+
+  &__tooltip-text {
+    position: relative;
+    padding-top: 80px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 54px;
+      height: 54px;
+      border-radius: 25px;
+      background-color: $top-menu;
+      top: 0;
+      left: 0;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+    }
+
+    &--appliances {
+      &::after {
+        width: 30px;
+        height: 30px;
+        background-image: url(../images/auto-select/ico/1.png);
+        top: 12px;
+        left: 12px;
+      }
+    }
+
+    &--engine {
+      &::after {
+        width: 30px;
+        height: 23px;
+        background-image: url(../images/auto-select/ico/2.png);
+        top: 14px;
+        left: 12px;
+      }
+    }
+
+    &--inlet {
+      &::after {
+        width: 26px;
+        height: 22px;
+        background-image: url(../images/auto-select/ico/3.png);
+        top: 16px;
+        left: 16px;
+      }
+    }
+
+    &--release {
+      &::after {
+        width: 26px;
+        height: 26px;
+        background-image: url(../images/auto-select/ico/4.png);
+        top: 14px;
+        left: 14px;
+      }
+    }
+
+    &--fluids {
+      &::after {
+        width: 28px;
+        height: 24px;
+        background-image: url(../images/auto-select/ico/5.png);
+        top: 15px;
+        left: 13px;
+      }
+    }
+
+    &--accu {
+      &::after {
+        width: 26px;
+        height: 26px;
+        background-image: url(../images/auto-select/ico/6.png);
+        top: 14px;
+        left: 14px;
+      }
+    }
+
+    &--turbine {
+      &::after {
+        width: 28px;
+        height: 26px;
+        background-image: url(../images/auto-select/ico/7.png);
+        top: 14px;
+        left: 12px;
+      }
+    }
+
+    &--body {
+      &::after {
+        width: 28px;
+        height: 21px;
+        background-image: url(../images/auto-select/ico/8.png);
+        top: 16px;
+        left: 14px;
+      }
+    }
+
+    &--salon {
+      &::after {
+        width: 20px;
+        height: 24px;
+        background-image: url(../images/auto-select/ico/9.png);
+        top: 15px;
+        left: 17px;
+      }
+    }
+
+    &--wheels {
+      &::after {
+        width: 30px;
+        height: 30px;
+        background-image: url(../images/auto-select/ico/10.png);
+        top: 12px;
+        left: 12px;
+      }
+    }
+
+    &--absorbers {
+      &::after {
+        width: 26px;
+        height: 26px;
+        background-image: url(../images/auto-select/ico/11.png);
+        top: 14px;
+        left: 14px;
+      }
+    }
+
+    &--steering {
+      &::after {
+        width: 30px;
+        height: 30px;
+        background-image: url(../images/auto-select/ico/12.png);
+        top: 12px;
+        left: 12px;
+      }
+    }
+
+    &--brakes {
+      &::after {
+        width: 30px;
+        height: 30px;
+        background-image: url(../images/auto-select/ico/13.png);
+        top: 12px;
+        left: 12px;
+      }
+    }
+
+    &--legal {
+      &::after {
+        width: 20px;
+        height: 24px;
+        background-image: url(../images/auto-select/ico/14.png);
+        top: 14px;
+        left: 18px;
+      }
+    }
+  }
+
+  &__image {
+    // display: none;
+  }
+}

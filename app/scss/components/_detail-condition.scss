@@ -1,0 +1,63 @@
+.detail-condition {
+  padding: 65px 0 90px;
+
+  @media (max-width: 570px) {
+    padding: 30px 0 45px;
+  }
+
+  &__title {
+    margin-bottom: 40px;
+    line-height: 1.4;
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 1.5;
+    @extend %commissioner-400;
+
+    p {
+      margin-bottom: 30px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__link {
+    font-size: 14px;
+    @extend %gilroy-600;
+    color: $accent-green;
+    padding-right: 25px;
+    position: relative;
+    transition: all 0.5s;
+
+    &:hover {
+      color: $top-link;
+      &::before {
+        background-color: $top-link;
+        transition: background-color 0.5s;
+      }
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background-color: $accent-green;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__svg {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 4px;
+    fill: #fff;
+  }
+}

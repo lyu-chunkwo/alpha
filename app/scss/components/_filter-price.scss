@@ -1,0 +1,196 @@
+.filter-price {
+  padding-top: 70px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+
+  @media (max-width: 560px) {
+   padding-top: 40px;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__img {
+    margin-left: -100px;
+    max-width: 500px;
+    height: 272px;
+    object-fit: cover;
+
+    @media (max-width: 1200px) {
+     display: none;
+    }
+
+  }
+
+  &__title {
+    font-size: 36px;
+    @extend %gilroy-700;
+    color: #fff;
+    margin-bottom: 35px;
+    @include text-limit;
+    -webkit-line-clamp: 2;
+
+    @media (max-width: 560px) {
+     font-size: 26px;
+    }
+  }
+
+  &__box {
+    width: 100%;
+    margin-right: 23px;
+    padding-top: 18px;
+    
+    @media (max-width: 1200px) {
+      padding-bottom: 80px;
+    }
+    
+    @media (max-width: 560px) {
+     padding-bottom: 40px;
+    }
+  }
+  
+  &__form-box {
+    max-width: 765px;
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: 560px) {
+     flex-wrap: wrap;
+    }
+  }
+
+  &__form {
+    max-width: 577px;
+    width: 100%;
+    margin-right: 20px;
+
+    @media (max-width: 560px) {
+     margin-bottom: 20px;
+    }
+  }
+
+  &__label {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    color: #fff;
+    @extend %gilroy-600;
+    padding: 20px 20px 25px;
+    border: 1px solid $filter-border;
+    border-radius: 5px;
+
+    @media (max-width: 560px) {
+     font-size: 15px;
+     padding: 20px 10px 25px;
+    }
+  }
+
+  &__cost {
+    display: flex;
+    position: relative;
+
+    span {
+      &::after {
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 1px;
+        background-color: #fff;
+        bottom: 0;
+        right: -1px;
+      }
+    }
+  }
+
+  &__fromto {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    line-height: 1.5;
+    color: $filter-border;
+    @extend %commissioner-300;
+  }
+
+  &__to {
+    display: none;
+  }
+
+  .irs--flat .irs-min,
+  .irs--flat .irs-max,
+  .irs--flat .irs-single {
+    display: none;
+  }
+
+  .irs--flat .irs-line {
+    top: -13px;
+    height: 5px;
+    background-color: #fff;
+    border-radius: 0 0 5px 5px;
+  }
+
+  .irs--flat .irs-bar--single {
+    border-radius: 0 0 0 5px;
+  }
+
+  .irs--flat .irs-bar {
+    top: -13px;
+    height: 5px;
+    background-image: -webkit-linear-gradient(0deg, rgb(26, 181, 48) 0%, rgb(213, 249, 0) 100%);
+  }
+
+  .irs--flat .irs-handle {
+    top: -25px;
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0px 0px 11px 0px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+  }
+
+  .irs--flat .irs-handle > i:first-child {
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 50%;
+    width: 15px;
+    height: 15px;
+    margin-left: 0px;
+    background-color: $accent-green;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+  }
+
+  .irs--flat {
+    height: 5px;
+  }
+
+  &__button {
+    // display: flex;
+    // align-items: center;
+    // padding-bottom: 10px;
+  }
+
+  &__btn {
+    border: none;
+    background-color: $accent-green;
+    height: 75px;
+    width: 165px;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #fff;
+    @extend %gilroy-600;
+    cursor: pointer;
+    border: 1px solid $accent-green;
+    transition: all 0.5s;
+    
+    &:hover {
+      background-color: #fff;
+      color: $accent-green;
+      border: 1px solid $accent-green;
+    }
+  }
+}

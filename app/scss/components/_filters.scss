@@ -1,0 +1,166 @@
+.filters {
+  background-color: $top-menu;
+  padding: 50px 0 25px;
+
+  &__form {
+    display: flex;
+    margin-bottom: 35px;
+    z-index: 0;
+
+    @media (max-width: 1200px) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__select {
+    @media (max-width: 1200px) {
+      margin-bottom: 20px;
+    }
+
+    @media (max-width: 644px) {
+      width: 100%;
+    }
+  }
+
+  &__select--from .jq-selectbox__select {
+    margin-right: 0;
+    border-radius: 5px 0 0 5px;
+
+    @media (max-width: 850px) {
+      margin-right: 25px;
+    }
+  }
+
+  &__select--before .jq-selectbox__select {
+    border-radius: 0 5px 5px 0;
+  }
+
+  &__select--from .jq-selectbox__select,
+  &__select--before .jq-selectbox__select {
+    width: 90px;
+    background: #fff;
+
+    @media (max-width: 850px) {
+      width: 180px;
+      border-radius: 4px;
+    }
+
+    @media (max-width: 644px) {
+      width: 100%;
+    }
+  }
+
+  &__select--from .jq-selectbox__select-text,
+  &__select--before .jq-selectbox__select-text {
+    width: 50px;
+  }
+
+  &__btn {
+    background-color: $accent-green;
+    color: #fff;
+    width: 180px;
+    height: 45px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    @extend %commissioner-400;
+
+    @media (max-width: 644px) {
+      width: 100%;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: center;
+
+    @media (max-width: 444px) {
+      display: block;
+    }
+  }
+
+  &__buttons-box {
+    margin-right: 55px;
+    position: relative;
+    padding-bottom: 4px;
+    padding-left: 25px;
+
+    @media (max-width: 444px) {
+      margin-bottom: 10px;
+      margin-right: 0;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      left: 0;
+      top: 5px;
+    }
+
+    &--controls {
+      &::before {
+        background-image: url(../images/png/controls.png);
+      }
+    }
+
+    &--close {
+      &::before {
+        background-image: url(../images/png/close.png);
+      }
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__button {
+    font-size: 14px;
+    line-height: 1.7;
+    color: $filters-buttons;
+    @extend %commissioner-400;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    border-bottom: 1px dotted $filters-buttons;
+    padding: 0 0 4px 0;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.jq-selectbox__trigger {
+  border-left: none;
+}
+
+.jq-selectbox__select {
+  width: 180px;
+  height: 47px;
+  padding-top: 7px;
+  color: $input-text;
+  @extend %commissioner-400;
+  font-size: 15px;
+  border: none;
+  margin-right: 25px;
+  background: #fff;
+
+  @media (max-width: 644px) {
+    width: 100%;
+  }
+
+  &:hover {
+    background: #fff;
+  }
+}
+
+.jq-selectbox__trigger-arrow {
+  top: 20px;
+  background-image: url(../images/png/angle-down.png);
+  width: 10px;
+  height: 6px;
+  border: none;
+}

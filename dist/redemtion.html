@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <link rel="icon" href="favicon.png" type="image/x-icon" />
+  <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alpha project | redeem</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link rel="stylesheet" href="css/slick.css" />
+  <link rel="stylesheet" href="css/style.min.css" />
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__inner">
+      <div class="container">
+        <div class="header__top">
+          <a href="index.html" class="header__logotype header--item">
+            <img class="header-logo" src="images/content-img/logo.png" alt="Logotype" />
+          </a>
+          <nav class="header__top-menu header--item">
+            <ul class="header__top-list">
+              <li class="header__top-item">
+                <button class="header__top-link" type="button" data-toggle="modal" data-target="#myModal">
+                  Тест-драйв
+                </button>
+                <div class="modal fade" id="myModal">
+                  <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"></button>
+                      </div>
+
+                      <h3 class="modal-title">Записаться на тест-драйв</h3>
+
+                      <div class="modal-body">
+                        <h3 class="modal__content-title">Выберите автомобиль</h3>
+
+                        <form class="modal__form" action="#">
+                          <div class="modal__formbox">
+                            <select class="modal__select modal__select--narrow" name="modal__model" id="modal__model">
+                              <option value="hyundai">Hyundai</option>
+                            </select>
+                            <select class="modal__select" name="modal__mark" id="modal__mark">
+                              <option value="solaris">Solaris</option>
+                            </select>
+                          </div>
+
+                          <div class="modal__select-widebox">
+                            <select class="modal__select modal__select--wide" name="generation" id="generation">
+                              <option value="2019">Hyundai Solaris, 2019 г., Автомат</option>
+                            </select>
+                          </div>
+                        </form>
+
+                        <h3 class="modal__content-title">Дата и контакты</h3>
+                        <form class="modal__form modal__form--date" action="#">
+                          <div class="modal__select-widebox modal__select-widebox--date">
+                            <select class="modal__select modal__select--wide" name="date" id="date">
+                              <option value="__select">Веберите дату тест-драйва</option>
+                            </select>
+                          </div>
+
+                          <label class="modal-select__label">
+                            <div class="modal-select__text">Выберите время:</div>
+                            <div class="modal-select__time">16:30</div>
+                          </label>
+                          <input class="modal-select__time-input" id="modal-select" type="text" data-min="09.00"
+                            data-max="17.30" step="0.1" data-from="16.3">
+
+                          <div class="modal__inputs">
+                            <input class="modal__input" type="text" placeholder="Ваше имя">
+                            <input class="modal__input" type="text" placeholder="Номер телефона">
+                          </div>
+                          <button class="modal__btn" type="submit">Оставить заявку</button>
+                        </form>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="header__top-item">
+                <a class="header__top-link" href="contacts.html">Контакты</a>
+              </li>
+              <li class="header__top-item header__top-item--drop">
+                <a class="header__top-link" href="#">Ещё</a>
+                <ul class="header__topsubmenu">
+                  <li class="header__topsubmenu-item">
+                    <a href="insurance.html" class="header__topsubmenu-link">Страхование</a>
+                  </li>
+                  <li class="header__topsubmenu-item">
+                    <a href="about.html" class="header__topsubmenu-link">О нас</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+
+          <ul class="header__contacts header--item">
+            <li class="header__contacts-item header__contacts-item--watch">
+              Ежедневно с 8:00 до 20:00
+            </li>
+            <li class="header__contacts-item header__contacts-item--marker">
+              Бишкек, ул. Киевская 356 е
+            </li>
+          </ul>
+
+          <ul class="header__buttons header--item">
+            <li class="header__num">
+              <a href="tel:+996709000000" class="header__num-link">0 709 00-00-00</a>
+            </li>
+            <ul class="header__buttons-box">
+              <li class="header__btn">
+                <button class="header__button" type="button">
+                  Заказать звонок
+                </button>
+              </li>
+              <li class="header__btn header__btn--border">
+                <a href="#" class="header__link"> Кабинет </a>
+              </li>
+
+            </ul>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <nav class="menu menu-page">
+      <div class="container">
+        <button class="menu__btn" type="button">
+          <span></span>
+        </button>
+        <ul class="menu__list">
+          <li class="menu__item menu__item--a">
+            <a class="menu__link menu__link--allauto" href="#">Автомобили</a>
+            <ul class="menu__submenu">
+              <li class="menu__submenunested-link">
+
+                <ul class="menu__submenunested-list">
+                  <li class="menu__submenu-item">
+                    <a class="menu__submenu-link" href="all-autos.html">
+                      Все автомобили
+                    </a>
+                  </li>
+                  <li class="menu__submenu-item">
+                    <a class="menu__submenu-link" href="#">
+                      Новые автомобили
+                    </a>
+                  </li>
+                  <li class="menu__submenu-item">
+                    <a class="menu__submenu-link" href="#">
+                      Автомобили с пробегом
+                    </a>
+                  </li>
+                  <li class="menu__submenu-item">
+                    <a class="menu__submenu-link" href="#">
+                      Mалолитражные автомобили
+                    </a>
+                  </li>
+                  <li class="menu__submenu-item">
+                    <a class="menu__submenu-link" href="#">
+                      Внедорожники и кроссоверы
+                    </a>
+                  </li>
+                  <li class="menu__submenu-item menu__submenu-item--wide">
+                    <a class="menu__submenu-link" href="#">
+                      Коммерческий транспорт и спецтехника
+                    </a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="menu__submenunested-link">
+                <ul class="brands__list">
+                  <li class="brands__item">
+                    <span class="brands__num">14</span>
+                    <a href="#"><img class="brands__img" src="images/png/brands/1.png" alt="Audi" /></a>
+                    <a href="#"><span class="brands__name">Audi</span></a>
+                  </li>
+                  <li class="brands__item">
+                    <span class="brands__num">8</span>
+                    <a href=""><img class="brands__img" src="images/png/brands/2.png" alt="Brilliance" /></a>
+                    <a href="#"><span class="brands__name">Brilliance</span></a>
+                  </li>
+                  <li class="brands__item">
+                    <span class="brands__num">27</span>
+                    <a href="#"><img class="brands__img" src="images/png/brands/3.png" alt="Changan" /></a>
+                    <a href="#"><span class="brands__name">Changan</span></a>
+                  </li>
+                  <li class="brands__item">
+                    <span class="brands__num">11</span>
+                    <a href="#"><img class="brands__img" src="images/png/brands/4.png" alt="Chery" /></a>
+                    <a href="#"><span class="brands__name">Chery</span></a>
+                  </li>
+                  <li class="brands__item">
+                    <span class="brands__num">20</span>
+                    <a href="#"><img class="brands__img" src="images/png/brands/5.png" alt="Chevrolet" /></a>
+                    <a href="#"><span class="brands__name">Chevrolet</span></a>
+                  </li>
+                  <li class="brands__item">
+                    <span class="brands__num">13</span>
+                    <a href="#"><img class="brands__img" src="images/png/brands/6.png" alt="Citroen" /></a>
+                    <a href="#"><span class="brands__name">Citroen</span></a>
+                  </li>
+                  <li class="brands__item">
+                    <span class="brands__num">4</span>
+                    <a href="#"><img class="brands__img" src="images/png/brands/7.png" alt="Datsun" /></a>
+                    <a href="#"><span class="brands__name">Datsun</span></a>
+                  </li>
+                  <li class="brands__item">
+                    <span class="brands__num">49</span>
+                    <a href="#"><img class="brands__img" src="images/png/brands/8.png" alt="Dongfeng" /></a>
+                    <a href="#"><span class="brands__name">Dongfeng</span></a>
+                  </li>
+                  <li class="brands__item">
+                    <span class="brands__num">6</span>
+                    <a href="#"><img class="brands__img" src="images/png/brands/9.png" alt="Hower" /></a>
+                    <a href="#"><span class="brands__name">Hower</span></a>
+                  </li>
+                  <li class="brands__item">
+                    <span class="brands__num">15</span>
+                    <a href="#"><img class="brands__img" src="images/png/brands/10.png" alt="FAW" /></a>
+                    <a href="#"><span class="brands__name">FAW</span></a>
+                  </li>
+                  <li class="brands__item">
+                    <span class="brands__num">10</span>
+                    <a href="#"><img class="brands__img" src="images/png/brands/11.png" alt="Ford" /></a>
+                    <a href="#"><span class="brands__name">Ford</span></a>
+                  </li>
+                  <li class="brands__item">
+                    <span class="brands__num">12</span>
+                    <a href="#"><img class="brands__img" src="images/png/brands/12.png" alt="Foton" /></a>
+                    <a href="#"><span class="brands__name">Foton</span></a>
+                  </li>
+                  <li class="brands__item">
+                    <span class="brands__num">5</span>
+                    <a href="#"><img class="brands__img" src="images/png/brands/13.png" alt="Geely" /></a>
+                    <a href="#"><span class="brands__name">Geely</span></a>
+                  </li>
+                  <li class="brands__item">
+                    <span class="brands__num">17</span>
+                    <a href="#"><img class="brands__img" src="images/png/brands/14.png" alt="Great Wall" /></a>
+                    <a href="#"><span class="brands__name">Great Wall</span></a>
+                  </li>
+                  <li class="brands__item">
+                    <span class="brands__num">1</span>
+                    <a href="#"><img class="brands__img" src="images/png/brands/15.png" alt="Haval" /></a>
+                    <a href="#"><span class="brands__name">Haval</span></a>
+                  </li>
+                  <li class="brands__item">
+                    <span class="brands__num">5</span>
+                    <a href="#"><img class="brands__img" src="images/png/brands/16.png" alt="Hawtai" /></a>
+                    <a href="#"><span class="brands__name">Hawtai</span></a>
+                  </li>
+                  <li class="brands__item">
+                    <span class="brands__num">28</span>
+                    <a href="#"><img class="brands__img" src="images/png/brands/17.png" alt="Honda" /></a>
+                    <a href="#"><span class="brands__name">Honda</span></a>
+                  </li>
+                  <li class="brands__item">
+                    <span class="brands__num">42</span>
+                    <a href="#"><img class="brands__img" src="images/png/brands/18.png" alt="Hyundai" /></a>
+                    <a href="#"><span class="brands__name">Hyundai</span></a>
+                  </li>
+                  <li class="brands__item">
+                    <span class="brands__num">7</span>
+                    <a href="#"><img class="brands__img" src="images/png/brands/19.png" alt="JAC" /></a>
+                    <a href="#"><span class="brands__name">JAC</span></a>
+                  </li>
+                  <li class="brands__item">
+                    <span class="brands__num">8</span>
+                    <a href="#"><img class="brands__img" src="images/png/brands/20.png" alt="Jeep" /></a>
+                    <a href="#"><span class="brands__name">Jeep</span></a>
+                  </li>
+                  <li class="brands__item">
+                    <span class="brands__num">22</span>
+                    <a href="#"><img class="brands__img" src="images/png/brands/21.png" alt="KIA" /></a>
+                    <a href="#"><span class="brands__name">KIA</span></a>
+                  </li>
+                  <li class="brands__item">
+                    <span class="brands__num">9</span>
+                    <a href="#"><img class="brands__img" src="images/png/brands/22.png" alt="Lada" /></a>
+                    <a href="#"><span class="brands__name">Lada</span></a>
+                  </li>
+                  <li class="brands__item">
+                    <span class="brands__num">1</span>
+                    <a href="#"><img class="brands__img" src="images/png/brands/23.png" alt="Lifan" /></a>
+                    <a href="#"><span class="brands__name">Lifan</span></a>
+                  </li>
+                  <li class="brands__item">
+                    <span class="brands__num">18</span>
+                    <a href="#"><img class="brands__img" src="images/png/brands/24.png" alt="Mazda" /></a>
+                    <a href="#"><span class="brands__name">Mazda</span></a>
+                  </li>
+                  <li class="brands__item">
+                    <span class="brands__num">10</span>
+                    <a href="#"><img class="brands__img" src="images/png/brands/25.png" alt="Mitsubishi" /></a>
+                    <a href="#"><span class="brands__name">Mitsubishi</span></a>
+                  </li>
+                  <li class="brands__item">
+                    <span class="brands__num">20</span>
+                    <a href="#"><img class="brands__img" src="images/png/brands/26.png" alt="Nissan" /></a>
+                    <a href="#"><span class="brands__name">Nissan</span></a>
+                  </li>
+                  <li class="brands__item">
+                    <span class="brands__num">12</span>
+                    <a href="#"><img class="brands__img" src="images/png/brands/27.png" alt="Opel" /></a>
+                    <a href="#"><span class="brands__name">Opel</span></a>
+                  </li>
+                  <li class="brands__item">
+                    <span class="brands__num">8</span>
+                    <a href="#"><img class="brands__img" src="images/png/brands/28.png" alt="Peugeot" /></a>
+                    <a href="#"><span class="brands__name">Peugeot</span></a>
+                  </li>
+                  <li class="brands__item">
+                    <span class="brands__num">3</span>
+                    <a href="#"><img class="brands__img" src="images/png/brands/29.png" alt="Ravon" /></a>
+                    <a href="#"><span class="brands__name">Ravon</span></a>
+                  </li>
+                  <li class="brands__item">
+                    <span class="brands__num">7</span>
+                    <a href="#"><img class="brands__img" src="images/png/brands/30.png" alt="Ranault" /></a>
+                    <a href="#"><span class="brands__name">Ranault</span></a>
+                  </li>
+                  <li class="brands__item">
+                    <span class="brands__num">1</span>
+                    <a href="#"><img class="brands__img" src="images/png/brands/31.png" alt="Skoda" /></a>
+                    <a href="#"><span class="brands__name">Skoda</span></a>
+                  </li>
+                  <li class="brands__item">
+                    <span class="brands__num">2</span>
+                    <a href="#"><img class="brands__img" src="images/png/brands/32.png" alt="SsangYong" /></a>
+                    <a href="#"><span class="brands__name">SsangYong</span></a>
+                  </li>
+                  <li class="brands__item">
+                    <span class="brands__num">30</span>
+                    <a href="#"><img class="brands__img" src="images/png/brands/33.png" alt="Subaru" /></a>
+                    <a href="#"><span class="brands__name">Subaru</span></a>
+                  </li>
+                  <li class="brands__item">
+                    <span class="brands__num">19</span>
+                    <a href="#"><img class="brands__img" src="images/png/brands/34.png" alt="Suzuki" /></a>
+                    <a href="#"><span class="brands__name">Suzuki</span></a>
+                  </li>
+                  <li class="brands__item">
+                    <span class="brands__num">25</span>
+                    <a href="#"><img class="brands__img" src="images/png/brands/35.png" alt="Toyota" /></a>
+                    <a href="#"><span class="brands__name">Toyota</span></a>
+                  </li>
+                  <li class="brands__item">
+                    <span class="brands__num">11</span>
+                    <a href="#"><img class="brands__img" src="images/png/brands/36.png" alt="Audi" /></a>
+                    <a href="#"><span class="brands__name">Audi</span></a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="menu__item menu__item--b">
+            <a class="menu__link menu__link--lombard" href="autolombard.html">Автоломбард</a>
+          </li>
+          <li class="menu__item menu__item--c">
+            <a class="menu__link menu__link--without" href="no-arrest.html">Авто без изъятия</a>
+          </li>
+          <li class="menu__item menu__item--d">
+            <a class="menu__link menu__link--installment" href="installment.html">Рассрочка</a>
+          </li>
+          <li class="menu__item menu__item--e">
+            <a class="menu__link menu__link--credit" href="credit.html">Кредит</a>
+          </li>
+          <li class="menu__item menu__item--f">
+            <a class="menu__link menu__link--tradein" href="tradein.html">Обмен/Trade-in</a>
+          </li>
+          <li class="menu__item menu__item--g">
+            <a class="menu__link menu__link--redemption" href="/redemtion.html">Выкуп авто</a>
+          </li>
+          <li class="menu__item menu__item--h">
+            <a class="menu__link menu__link--mediator" href="mediator.html">Посредник</a>
+          </li>
+          <li class="menu__item menu__item--i">
+            <a class="menu__link menu__link--selection" href="selection.html">Автоподбор</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="breadcrumbs">
+      <div class="container">
+        <ul class="breadcrumbs__list">
+          <li class="breadcrumbs__item">
+            <a class="breadcrumbs__link" href="#">Alphamotors</a>
+          </li>
+          <li class="breadcrumbs__item">
+            <a class="breadcrumbs__link" href="#">Выкуп авто</a>
+          </li>
+        </ul>
+
+        <h1 class="page-title">Выкуп авто с пробегом</h1>
+        <h2 class="page-subtitle page-subtitle--autolombard">Мы предоставляем цену выше рыночной!</h2>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="fill">
+      <div class="container">
+        <div class="fill__inner">
+          <div class="fill__text-box">
+            <h3 class="fill__text-title">
+              Заполните онлайн-заявку и мы оценим ваше авто в кратчайшие сроки
+            </h3>
+            <div class="fill__text">
+              <p>
+                Наш менеджер свяжется с вами в самое ближайшее время, укажет оценочную стоимость и ответит на ваши
+                вопросы.
+              </p>
+            </div>
+          </div>
+
+          <div class="fill__form-box">
+            <h3 class="fill__form-title">Ваш автомобиль</h3>
+            <form class="fill__form-auto" action="#">
+              <select class="fill__select" name="year">
+                <option value="year">Год выпуска</option>
+              </select>
+              <select class="fill__select" name="brand">
+                <option value="brand">Марка</option>
+              </select>
+              <select class="fill__select" name="model">
+                <option value="model">Модель</option>
+              </select>
+              <input class="fill__input" type="text" placeholder="Пробег (км)">
+              <select class="fill__select" name="modification">
+                <option value="modification">Модификация</option>
+              </select>
+              <select class="fill__select" name="equipment">
+                <option value="equipment">Комплектация</option>
+              </select>
+            </form>
+
+            <h3 class="fill__form-title">Контактные данные</h3>
+            <form class="fill__form-contacts" action="#">
+              <div class="fill__form-inputs">
+                <input class="fill__form-input" type="text" placeholder="Ваше имя">
+                <input class="fill__form-input" type="text" placeholder="Номер телефона">
+              </div>
+              <div class="register__consent">
+                <label class="register__consent-label">
+                  <input class="register__check" type="checkbox" checked>
+                  <span class="register__checkbox"></span>
+                  <div class="register__check-text">
+                    <p>
+                      Согласен(а) на обработку <span>персональных данных</span>
+                    </p>
+                  </div>
+                </label>
+                <button class="register__btn" type="button">Оставить заявку</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="benefits-buyout">
+      <div class="container">
+        <h3 class="title benefits-buyout__title">Преимущества выкупа авто alfamotors</h3>
+        <ul class="benefits-buyout__inner">
+          <li class="benefits-buyout__item benefits-buyout__item--higher">
+            <h3 class="benefits-buyout__item-title benefits-buyout__item-title--higher">Цена выкупа авто выше, чем по
+              рынку</h3>
+            <div class="benefits-buyout__text">
+              <p>
+                Мы производим максимально выгодную для вас оценку автомобиля! Вы можете присутсвовать или просто
+                отдыхать дома.
+              </p>
+            </div>
+          </li>
+          <li class="benefits-buyout__item benefits-buyout__item--quick">
+            <h3 class="benefits-buyout__item-title">Быстрый выкуп. Деньги платим сразу</h3>
+            <div class="benefits-buyout__text">
+              <p>
+                Если цена выкупа вас устроит, то мы выплатим вам всю сумму, названную оценщиком, в течение 24 часов.
+              </p>
+            </div>
+          </li>
+          <li class="benefits-buyout__item benefits-buyout__item--everything">
+            <h3 class="benefits-buyout__item-title">Выкупаем все автомобили</h3>
+            <div class="benefits-buyout__text">
+              <p>
+                Гарантия выкупа любого автомобиля: легкового, грузового, нового и с пробегом, кредитного или авто в
+                лизинге, требующего ремонта.
+              </p>
+            </div>
+          </li>
+          <li class="benefits-buyout__item benefits-buyout__item--guarantee">
+            <h3 class="benefits-buyout__item-title">Гарантия сделки</h3>
+            <div class="benefits-buyout__text">
+              <p>
+                Компания обеспечивает юридическую прозрачность сделки, контролирует правильное оформление документов и
+                выплат.
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="how-buyout">
+      <div class="container">
+        <h3 class="title how-buyout__title">как это работает</h3>
+        <ul class="how-buyout__inner">
+          <li class="how-buyout__item">
+            <span class="how-buyout__num how-buyout__num--one">1</span>
+            <div class="how-buyout__text-box">
+              <h3 class="how-buyout__subtitle">Оформите on-line заявку на оценку вашего авто</h3>
+              <div class="how-buyout__text">
+                <p>
+                  Наш менеджер незамедлительно свяжется с вами, чтобы согласовать время и место осмотра вашего
+                  автомобиля.
+                </p>
+              </div>
+              <button class="register__btn register__btn--howbuyout" type="button">Оформить заявку</button>
+            </div>
+          </li>
+          <li class="how-buyout__item">
+            <span class="how-buyout__num how-buyout__num--two">2</span>
+            <div class="how-buyout__text-box">
+              <h3 class="how-buyout__subtitle">Пройдите бесплатную экспресс-диагностику</h3>
+              <div class="how-buyout__text">
+                <p>
+                  Мы бесплатно проверим техническое состояние вашего автомобиля, оценим его и предложим цену выкупа.
+                </p>
+              </div>
+            </div>
+          </li>
+          <li class="how-buyout__item">
+            <span class="how-buyout__num how-buyout__num--three">3</span>
+            <div class="how-buyout__text-box">
+              <h3 class="how-buyout__subtitle">Получите деньги сразу</h3>
+              <div class="how-buyout__text">
+                <p>
+                  Мы сразу платим за автомобиль 100% его стоимости, или выдаем официальный сертификат на фиксированную
+                  цену выкупа.
+                </p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="services-buyout">
+      <div class="container">
+        <h3 class="services-buyout__title title">Услуги по выкупу автомобилей</h3>
+        <div class="services-buyout__inner">
+          <div class="services-buyout__item services-buyout__item--top">
+            <div class="services-buyout__image services-buyout__image--top">
+              <img src="images/redeem/estimate.jpg" alt="Бесплатная оценка" class="services-buyout__img">
+            </div>
+            <div class="services-buyout__text-box">
+              <h3 class="services-buyout__text-title">Бесплатная оценка</h3>
+              <div class="services-buyout__text">
+                <p>
+                  Объективная оценка технического состояния транспортного средства позволяет Вам дорого продать свой
+                  автомобиль в короткие
+                  сроки. Тщательная экспертная диагностика, сопровождающая выкуп авто, проводится совершенно
+                  бесплатно.
+                </p>
+              </div>
+              <button class="register__btn" type="button">Оценить авто</button>
+            </div>
+
+          </div>
+
+          <div class="services-buyout__item services-buyout__item--bottom">
+            <div class="services-buyout__text-box services-buyout__text-box--bottom">
+              <h3 class="services-buyout__text-title services-buyout__text-title--bottom">Срочный выкуп авто с пробегом
+              </h3>
+              <div class="services-buyout__text">
+                <p>
+                  Выкупаем автомобили с неисправностями, требующие покраски, взятые в кредит, после ДТП. Вам не придется
+                  самостоятельно
+                  снимать автомобиль с регистрационного учета в ГИБДД и искать потенциальных покупателей.
+                </p>
+              </div>
+              <button class="register__btn" type="button">Оставить заявку</button>
+            </div>
+            <div class="services-buyout__image services-buyout__image--bottom">
+              <img src="images/redeem/quick.jpg" alt="Бесплатная оценка" class="services-buyout__img">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="questions">
+      <div class="container">
+        <div class="questions__inner">
+          <div class="questions__text-box">
+            <h3 class="questions__title">У вас остались вопросы?</h3>
+            <div class="questions__text">
+              <p>
+                Заполните форму и мы свяжемся с вами
+                в самое ближайшее время
+              </p>
+            </div>
+          </div>
+
+          <div class="questions__form-box">
+            <form class="questions__form" action="#">
+              <div class="questions__inputs">
+                <input class="questions__input" type="text" placeholder="Ваше имя">
+                <span class="questions__bottom-inputs">
+                  <input type="text" class="questions__bottom-input questions__bottom-input--phone"
+                    placeholder="Номер телефона">
+                  <input type="text" class="questions__bottom-input questions__bottom-input--email"
+                    placeholder="Электронная почта">
+                </span>
+              </div>
+
+              <div class="questions__form-bottom">
+                <label class="questions__label">
+                  <input type="checkbox" class="questions__check" checked>
+                  <span class="questions__checkbox"></span>
+                  <div class="questions__check-text">
+                    <p>
+                      Согласен(а) на обработку <span>персональных данных</span>
+                    </p>
+                  </div>
+                </label>
+
+                <button class="questions__btn" type="submit">Отправить заявку</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <ul class="footer__inner">
+        <li class="footer__items">
+          <h3 class="footer__title">О компании</h3>
+          <ul class="footer__list">
+            <li class="footer__item">
+              <a class="footer__link" href="contacts.html"> Контакты </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#"> Новости </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#"> Акции </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#"> Миссия </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                Пользовательское соглашение
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="footer__items">
+          <h3 class="footer__title">Услуги</h3>
+          <ul class="footer__list">
+            <li class="footer__item">
+              <a class="footer__link" href="redemtion.html"> Выкуп авто </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="installment.html"> Рассрочка </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="credit.html"> Кредит </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="selection.html"> Автоподбор </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="tradein.html"> Обмен/Trade-in </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="mediator.html">Посредник</a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="footer__items">
+          <h3 class="footer__title">Авто по странам</h3>
+          <ul class="footer__list">
+            <li class="footer__item">
+              <a class="footer__link" href="#"> Японские </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#"> Российские </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#"> Европейские </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#"> Китайские </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#"> Корейские </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Немецкие </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Французские </a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="footer__items">
+          <h3 class="footer__title">Авто по кузову</h3>
+          <ul class="footer__list">
+            <li class="footer__item">
+              <a class="footer__link" href="#"> Седаны </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#"> Хэтчбэки </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#"> Лифтбэки </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#"> Универсалы </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#"> Кроссоверы </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Внедорожники </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Купе </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Пикапы </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Микроавтобусы </a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="footer__items">
+          <h3 class="footer__title">Контакты</h3>
+          <ul class="footer__list">
+            <li class="footer__item">
+              <a class="footer__link" href="tel:+996709000000">
+                0 709 00 00 00
+              </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="tel:+996709000000">
+                0 553 00 00 00
+              </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="tel:+996709000000">
+                0 554 00 00 00
+              </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="mailto:manager@alfamotors.kg"> manager@alfamotors.kg </a>
+            </li>
+            <li class="footer__item footer__item--address">Бишкек, ул. Киевская 356 е</li>
+
+            <ul class="footer__socials">
+              <li class="footer__socials-item">
+                <a class="footer__socials-link footer__socials-link--twitter" href="#">
+                  <img src="images/png/twit.png" alt="twitter">
+                </a>
+              </li>
+              <li class="footer__socials-item">
+                <a class="footer__socials-link footer__socials-link--youtube" href="#">
+                  <img src="images/png/youtube.png" alt="youtube">
+                </a>
+              </li>
+              <li class="footer__socials-item">
+                <a class="footer__socials-link footer__socials-link--fb" href="#">
+                  <img src="images/png/fb.png" alt="facebook">
+                </a>
+              </li>
+              <li class="footer__socials-item">
+                <a class="footer__socials-link footer__socials-link--insta" href="#">
+                  <img src="images/png/insta.png" alt="instagram">
+                </a>
+              </li>
+            </ul>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <div class="footer__bottom">
+      <div class="container">
+        <div class="footer__bottom-inner">
+          <div class="footer__bottom-text">
+            <p>Дизайн: Александр Богачёв</p>
+          </div>
+          <div class="footer__bottom-copy">
+            <p>© 2021 AlfaMotors</p>
+          </div>
+          <div class="footer__bottom-text">
+            <p>Разработка: <a href="mailto:inbox@webex.go.kg">Webex studio</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>

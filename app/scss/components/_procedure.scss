@@ -1,0 +1,58 @@
+.procedure {
+  padding: 70px 0 60px;
+
+  &__title {
+    width: 200px;
+    margin-bottom: 40px;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 -12px;
+  }
+
+  &__item  {
+    width: 282px;
+    padding: 30px;
+    border: 1px solid $calc-credit;
+    border-radius: 10px;
+    margin: 0 12px 25px;
+  }
+
+  &__num {
+    font-size: 48px;
+    @extend %gilroy-800;
+    color: $accent-green;
+    margin-bottom: 40px;
+    display: block;
+  }
+
+  &__item--title {
+    max-width: 190px;
+    font-size: 20px;
+    @extend %gilroy-700;
+    color: $top-menu;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 50px;
+      height: 4px;
+      background-color: $top-menu;
+      bottom: 0;
+      left: 0;
+    }
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 1.5;
+    @extend %commissioner-400;
+    color: $top-menu;
+  }
+}

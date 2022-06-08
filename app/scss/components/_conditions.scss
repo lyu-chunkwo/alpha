@@ -1,0 +1,121 @@
+.page-title--autolombard {
+  margin-bottom: 20px;
+}
+
+.page-subtitle--autolombard {
+  margin-bottom: 30px;
+}
+.conditions {
+  padding: 60px 0 40px;
+  background-color: $conditions-bg;
+
+  @media (max-width: 620px) {
+    padding: 30px 0 0;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    width: 195px;
+    line-height: 1.4;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 -20px;
+  }
+
+  &__item {
+    max-width: 330px;
+    margin: 0 20px 60px;
+    padding-top: 100px;
+    position: relative;
+
+    @media (max-width: 1100px) {
+      max-width: 100%;
+      width: 100%;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      background-color: $accent-green;
+      top: 0;
+      left: 10px;
+      border-radius: 50%;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 40px;
+      left: 0;
+    }
+
+    &--flexibility {
+      &::after {
+        background-image: url(../images/png/conditions/01.png);
+        width: 38px;
+        height: 31px;
+      }
+    }
+
+    &--benefit {
+      &::after {
+        background-image: url(../images/png/conditions/02.png);
+        width: 38px;
+        height: 38px;
+      }
+    }
+
+    &--minamount {
+      &::after {
+        background-image: url(../images/png/conditions/03.png);
+        width: 33px;
+        height: 33px;
+      }
+    }
+
+    &--period {
+      &::after {
+        background-image: url(../images/png/conditions/04.png);
+        width: 38px;
+        height: 38px;
+      }
+    }
+
+    &--minrate {
+      &::after {
+        background-image: url(../images/png/conditions/05.png);
+        width: 40px;
+        height: 38px;
+      }
+    }
+
+    &--rate {
+      &::after {
+        background-image: url(../images/png/conditions/06.png);
+        width: 38px;
+        height: 38px;
+      }
+    }
+  }
+
+  &__item-title {
+    font-size: 20px;
+    color: $top-menu;
+    @extend %gilroy-700;
+    margin-bottom: 25px;
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 1.5;
+    color: $top-menu;
+    @extend %commissioner-400;
+    @include text-limit;
+  }
+}

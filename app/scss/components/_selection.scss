@@ -1,0 +1,106 @@
+.img-links {
+  margin-bottom: 50px;
+
+  @media (max-width: 616px) {
+    margin-bottom: 25px;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 -5px;
+  }
+
+  &__item {
+    position: relative;
+    width: 190px;
+    height: 90px;
+    margin: 0 5px 10px;
+
+    @media (max-width: 900px) {
+      margin-bottom: 10px;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__link {
+    img {
+      border-radius: 4px;
+      width: 190px;
+      height: 90px;
+      object-fit: cover;
+    }
+  }
+
+  &__text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    font-style: 16px;
+    @extend %gilroy-700;
+    text-transform: uppercase;
+  }
+}
+
+.selection {
+  background-color: $arrivals-bg;
+  padding: 50px 0 60px;
+
+  @media (max-width: 616px) {
+    padding-top: 25px;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+
+    @media (max-width: 564px) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__title {
+    margin-right: 20px;
+
+    @media (max-width: 340px) {
+      font-size: 18px;
+    }
+  }
+
+  &__label {
+    font-size: 14px;
+    line-height: 1.7;
+    @extend %commissioner-500;
+    color: #7a7a7a;
+
+    span {
+      margin-right: 10px;
+    }
+  }
+
+  &__select {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 5px 0 5px 0;
+    border-bottom: 1px dotted $top-menu;
+    background-image: url(../images/ico/drop-ico.svg);
+    appearance: none;
+    background-repeat: no-repeat, repeat;
+    background-position: right 0 top 18px, 0 0;
+    padding: 8px 15px 5px 0;
+  }
+
+  .arrival__box--selection {
+    margin-bottom: 30px;
+  }
+}

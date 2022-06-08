@@ -1,0 +1,316 @@
+.interactive {
+  padding: 65px 0 55px;
+  background-color: $benefits-bg;
+
+  @media (max-width: 370px) {
+    padding: 35px 0 25px;
+  }
+
+  &__title {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  &__inner {
+    max-width: 725px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 55px 70px;
+
+    @media (max-width: 620px) {
+      padding: 35px 10px;
+    }
+
+    @media (max-width: 370px) {
+      padding-bottom: 10px;
+    }
+  }
+
+  &__top-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+
+    @media (max-width: 532px) {
+      display: block;
+    }
+  }
+
+  &__item-title {
+    font-size: 20px;
+    @extend %gilroy-700;
+    color: $top-menu;
+
+    @media (max-width: 532px) {
+      width: 170px;
+    }
+
+    &--result {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__steps {
+    font-size: 16px;
+    line-height: 1.5;
+    @extend %commissioner-400;
+    color: #a4a4a4;
+    padding-right: 90px;
+  }
+
+  .choose {
+    padding-top: 25px;
+    margin-bottom: 35px;
+
+    &__box {
+      max-width: 590px;
+      display: flex;
+      justify-content: space-between;
+
+      &--top {
+        margin-bottom: 15px;
+      }
+
+      @media (max-width: 760px) {
+        display: block;
+      }
+    }
+
+    &__label {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__label--narrow {
+    display: block;
+  }
+
+  &__label--narrow .jq-selectbox__select {
+    margin-right: 0;
+  }
+
+  .jq-selectbox__select {
+    width: 280px;
+    margin-right: 0;
+
+    @media (max-width: 760px) {
+      width: 100%;
+    }
+  }
+
+  .choose .jq-selectbox__select {
+    color: $top-menu;
+    font-weight: 500;
+  }
+
+  .choose .jq-selectbox__trigger-arrow {
+    background-image: url(../images/png/angle-down.png);
+  }
+
+  .arrange {
+    max-width: 590px;
+
+    &__labels {
+      display: flex;
+      margin-bottom: 25px;
+
+      @media (max-width: 760px) {
+        display: block;
+      }
+    }
+
+    &__label {
+      margin-right: 20px;
+      max-width: 285px;
+      width: 100%;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      @media (max-width: 760px) {
+        width: 100%;
+        margin-bottom: 15px;
+      }
+    }
+
+    &__span {
+      display: block;
+      font-size: 12px;
+      @extend %commissioner-400;
+      color: $choose-text;
+
+      @media (max-width: 760px) {
+        padding-top: 15px;
+      }
+    }
+
+    &__input {
+      max-width: 285px;
+      width: 100%;
+      background-color: transparent;
+      color: $top-menu;
+      @extend %commissioner-500;
+      padding-left: 0;
+      padding-top: 0;
+      font-size: 15px;
+      height: 40px;
+      border: none;
+      border-bottom: 1px solid $calc-credit;
+      border-radius: 0;
+      padding-bottom: 20px;
+      padding-top: 10px;
+
+      &::placeholder {
+        color: $top-menu;
+        font-weight: 500;
+        font-size: 15px;
+        opacity: 0.5;
+      }
+
+      @media (max-width: 760px) {
+        max-width: 100%;
+      }
+    }
+
+    .filters__btn {
+      max-width: 180px;
+
+      @media (max-width: 660px) {
+        max-width: 600px;
+      }
+    }
+  }
+
+  .register__btn {
+    width: 180px;
+    height: 45px;
+    border: none;
+    background-color: $accent-green;
+    color: #fff;
+    @extend %gilroy-500;
+    border-radius: 5px;
+    transition: all 0.5s;
+
+    &:hover {
+      background-color: transparent;
+      border: 1px solid $accent-green;
+      color: $accent-green;
+    }
+
+    @media (max-width: 660px) {
+      width: 100%;
+    }
+  }
+
+  .register__consent-label {
+    display: flex;
+    align-items: center;
+
+    @media (max-width: 660px) {
+      margin-bottom: 25px;
+    }
+  }
+
+  .register__consent {
+    max-width: 590px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 35px;
+    margin-bottom: 30px;
+    border-bottom: 1px dotted $calc-credit;
+
+    @media (max-width: 660px) {
+      display: block;
+    }
+  }
+
+  &__result-images {
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: 520px) {
+      display: block;
+    }
+  }
+
+  &__images-box {
+    max-width: 280px;
+    margin-right: 15px;
+
+    @media (max-width: 520px) {
+      max-width: 100%;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__result-img {
+    width: 280px;
+    height: 210px;
+    object-fit: cover;
+
+    @media (max-width: 520px) {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__you-car {
+    font-size: 12px;
+    line-height: 2;
+    color: $choose-text;
+    @extend %commissioner-400;
+  }
+
+  &__you-brand {
+    font-size: 14px;
+    line-height: 1.7;
+    @extend %gilroy-700;
+    color: $top-menu;
+    margin-bottom: 20px;
+  }
+
+  .slick-btn {
+    width: 35px;
+    height: 25px;
+    border: none;
+    background: $top-menu;
+    top: -40px;
+    right: 0;
+    position: absolute;
+    cursor: pointer;
+
+    @media (max-width: 532px) {
+      top: -65px;
+    }
+  }
+
+  .slick-btn.slick-disabled {
+    background: $arrows-bg;
+    cursor: default;
+  }
+
+  .slick-prev {
+    right: 36px;
+    border-radius: 20px 0 0 20px;
+    z-index: 5;
+
+    img {
+      padding-left: 9px;
+    }
+  }
+
+  .slick-next {
+    border-radius: 0 20px 20px 0;
+
+    img {
+      padding-left: 9px;
+    }
+  }
+}

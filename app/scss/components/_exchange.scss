@@ -1,0 +1,109 @@
+.exchange {
+  padding: 115px 0;
+  background-image: url(../images/trade-in/top-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+
+  @media (max-width: 960px) {
+    padding: 55px 0;
+  }
+
+  @media (max-width: 660px) {
+    padding: 35px 0;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: 960px) {
+      display: block;
+    }
+  }
+
+  &__text-box {
+    max-width: 590px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @media (max-width: 960px) {
+      margin-bottom: 25px;
+      max-width: 100%;
+    }
+  }
+
+  &__text-title {
+    font-size: 48px;
+    @extend %gilroy-700;
+    margin-bottom: 30px;
+
+    @media (max-width: 1070px) {
+      font-size: 36px;
+    }
+
+    @media (max-width: 960px) {
+      margin-bottom: 20px;
+    }
+
+    @media (max-width: 660px) {
+      font-size: 28px;
+    }
+  }
+
+  &__text {
+    font-size: 18px;
+    line-height: 1.4;
+    @extend %commissioner-400;
+    max-width: 435px;
+
+    @media (max-width: 960px) {
+      max-width: 100%;
+    }
+
+    @media (max-width: 660px) {
+      font-size: 15px;
+    }
+  }
+
+  &__form {
+    max-width: 385px;
+    background-color: #fff;
+    padding: 40px 25px;
+    border-radius: 5px;
+
+    @media (max-width: 960px) {
+      max-width: 100%;
+    }
+
+    @media (max-width: 660px) {
+      padding: 20px 15px;
+    }
+  }
+
+  &__form-title {
+    font-size: 16px;
+    @extend %gilroy-700;
+    color: $top-menu;
+    margin-bottom: 20px;
+  }
+
+  .register__input {
+    background-color: #fff;
+    color: $input-text;
+    border: 1px solid $calc-credit;
+    margin-bottom: 15px;
+    @extend %commissioner-400;
+
+    &--num {
+      margin-bottom: 35px;
+    }
+
+    &::placeholder {
+      color: $input-text;
+      opacity: 0.5;
+    }
+  }
+}

@@ -1,0 +1,229 @@
+.advantages-mediator {
+  padding: 70px 0 105px;
+
+  &__title {
+    margin-bottom: 45px;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    @media (max-width: 1220px) {
+      display: block;
+    }
+  }
+
+  &__item {
+    max-width: 587px;
+    min-height: 375px;
+    padding: 35px 40px 55px 150px;
+    background-color: $benefits-bg;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    color: $top-menu;
+    position: relative;
+
+    @media (max-width: 1220px) {
+      max-width: 100%;
+      padding-bottom: 20px;
+      min-height: 240px;
+    }
+
+    @media (max-width: 660px) {
+      padding: 25px 20px 25px;
+    }
+
+    &--dark {
+      background-color: $top-menu;
+
+      @media (max-width: 1220px) {
+        min-height: 350px;
+      }
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 40px;
+      left: 23px;
+      z-index: 5;
+
+      @media (max-width: 660px) {
+        display: none;
+      }
+    }
+
+    &--free {
+      .advantages-mediator__subtitle {
+        width: 100px;
+      }
+      &::before {
+        background-image: url(../images/mediator/ico/1.png);
+        width: 60px;
+        height: 60px;
+      }
+    }
+
+    &--safe {
+      .advantages-mediator__subtitle {
+        width: 140px;
+      }
+      &::before {
+        background-image: url(../images/mediator/ico/2.png);
+        width: 60px;
+        height: 60px;
+      }
+    }
+
+    &--quick {
+      .advantages-mediator__subtitle {
+        width: 175px;
+      }
+      &::before {
+        background-image: url(../images/mediator/ico/3.png);
+        width: 60px;
+        height: 60px;
+      }
+    }
+
+    &--range {
+      .advantages-mediator__subtitle {
+        width: 210px;
+      }
+      &::before {
+        background-image: url(../images/mediator/ico/4.png);
+        width: 60px;
+        height: 52px;
+      }
+    }
+
+    &--credit {
+      .advantages-mediator__subtitle {
+        width: 160px;
+      }
+      &::before {
+        background-image: url(../images/mediator/ico/5.png);
+        width: 60px;
+        height: 57px;
+      }
+    }
+
+    &--region {
+      &::before {
+        background-image: url(../images/mediator/ico/6.png);
+        width: 60px;
+        height: 60px;
+      }
+    }
+
+    &--guarantee {
+      &::before {
+        background-image: url(../images/mediator/ico/7.png);
+        width: 54px;
+        height: 60px;
+      }
+    }
+
+    &--dark {
+      &::before {
+        background-image: url(../images/mediator/ico/8.png);
+        width: 60px;
+        height: 60px;
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 60px;
+      height: 43px;
+      background-image: url(../images/ico/triangle.svg);
+      top: 35px;
+      left: 48px;
+      z-index: 0;
+
+      @media (max-width: 660px) {
+        display: none;
+      }
+    }
+
+    &--dark {
+      &::after {
+        background-image: url(../images/ico/triangle-grey.svg);
+
+        @media (max-width: 660px) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__subtitle {
+    font-size: 18px;
+    @extend %gilroy-700;
+    margin-bottom: 25px;
+    padding-bottom: 25px;
+    position: relative;
+    max-width: 240px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 50px;
+      height: 4px;
+      background-color: $top-menu;
+      bottom: 0;
+      left: 0;
+    }
+
+    &--white {
+      color: #fff;
+      max-width: 400px;
+
+      &::before {
+        background-color: #fff;
+      }
+    }
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 1.5;
+    @extend %commissioner-400;
+  }
+
+  &__labels {
+    margin-bottom: 20px;
+  }
+
+  &__label {
+    display: block;
+  }
+
+  &__form-text {
+    font-size: 12px;
+    line-height: 2;
+    @extend %commissioner-300;
+    color: $choose-text;
+    display: block;
+  }
+
+  &__input {
+    background-color: transparent;
+    border: none;
+    margin-bottom: 10px;
+    padding: 5px 0 10px;
+    border-bottom: 1px solid $choose-border__form;
+    width: 100%;
+    color: #fff;
+
+    &::placeholder {
+      color: $choose-form__text;
+      font-size: 15px;
+      line-height: 1.6;
+      @extend %commissioner-400;
+    }
+  }
+}

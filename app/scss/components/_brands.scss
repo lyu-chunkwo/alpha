@@ -1,0 +1,55 @@
+.brands {
+  margin-bottom: 70px;
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    border-top: 1px solid $tails-border;
+    border-left: 1px solid $tails-border;
+    padding: 0;
+    margin: 0;
+  }
+  
+  &__item {
+    flex: 1 0 99px;
+    height: 100px;
+    padding: 6px 10px 15px 10px;
+    border-right: 1px solid $tails-border;
+    border-bottom: 1px solid $tails-border;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    @extend %commissioner-300;
+
+    &:hover {
+      .brands__name {
+        color: $accent-red;
+        transition: color 0.5s;
+      }
+    }
+  }
+
+  &__num {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 11px;
+    color: $tails-num;
+  }
+
+  &__img {
+    max-width: 67px;
+    max-height: 41px;
+    object-fit: cover;
+  }
+
+  &__name {
+    font-weight: 500;
+    font-size: 13px;
+    color: $top-menu;
+    max-width: 75px;
+    @include text-limit;
+    -webkit-line-clamp: 1;
+  }
+}

@@ -1,0 +1,100 @@
+.faq {
+  background-image: url(../images/content-img/faq.png);
+  padding: 50px 0 55px;
+
+  &__inner {
+    background-color: #fff;
+    padding: 55px 105px;
+
+    @media (max-width: 920px) {
+      padding: 50px 20px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__container {
+    max-width: 960px;
+  }
+
+  .accordion-title {
+    position: relative;
+    margin: 0;
+    padding: 25px 0;
+    background-color: #fff;
+    font-size: 18px;
+    color: $top-menu;
+    cursor: pointer;
+    @extend %gilroy-700;
+
+    @media (max-width: 734px) {
+      font-size: 15px;
+    }
+  }
+
+  .accordion-title:active,
+  .accordion-title.open {
+    background-color: #fff;
+    color: $accent-green;
+  }
+
+  .accordion-title.open.accordion-title::before {
+    background-color: $accent-green;
+  }
+
+  .accordion-title::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 18px;
+    height: 2px;
+    transform: rotate(90deg);
+    background: $top-menu;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .accordion-title::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 18px;
+    height: 2px;
+    background: $top-menu;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .accordion-title.open::before {
+    transform: rotate(180deg);
+  }
+
+  .accordion-title.open::after {
+    opacity: 0;
+  }
+
+  .accordion-box {
+    border-bottom: 1px solid $arrival-border;
+  }
+
+  .accordion-content,
+  .accordion-content--open {
+    padding: 0 0 25px 0;
+    font-size: 16px;
+    line-height: 1.5;
+    @extend %commissioner-400;
+    color: $top-menu;
+    max-width: 855px;
+
+    @media (max-width: 734px) {
+      font-size: 14px;
+    }
+  }
+
+  .accordion-container {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}

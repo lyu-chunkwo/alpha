@@ -1,0 +1,259 @@
+.modal-dialog {
+  max-width: 582px;
+}
+
+.modal-content {
+  border: none;
+  border-radius: 10px;
+  background-image: url(../images/modal/modal-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.modal-header {
+  border: none;
+  margin-bottom: 175px;
+  position: relative;
+
+  @media (max-width: 580px) {
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 583px;
+    height: 257px;
+    background-image: url(../images/modal/modal-bg2.png);
+    left: 0;
+    top: -35px;
+
+    @media (max-width: 580px) {
+      display: none;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 237px;
+    height: 140px;
+    background-image: url(../images/modal/modal-car.png);
+    left: 50%;
+    transform: translateX(-50%);
+    top: 70px;
+  }
+}
+
+.modal-title {
+  display: flex;
+  justify-content: center;
+  color: #fff;
+  font-size: 22px;
+  line-height: 1.36;
+  text-transform: uppercase;
+  @extend %gilroy-700;
+  position: relative;
+  z-index: 50;
+  top: -188px;
+
+  @media (max-width: 416px) {
+    font-size: 16px;
+    top: -170px;
+  }
+}
+
+.close {
+  display: inline-block;
+  position: relative;
+  opacity: 1;
+  width: 20px;
+  height: 20px;
+  z-index: 150;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background-image: url(../images/modal/close.png);
+    right: 19px;
+  }
+}
+
+.modal-body {
+  padding: 0 72px 35px;
+
+  @media (max-width: 580px) {
+    padding: 35px 20px 25px;
+  }
+}
+
+.modal {
+  &__form {
+    margin-bottom: 30px;
+
+    &--date {
+      margin-bottom: 0;
+    }
+
+    .irs-single,
+    .irs-min,
+    .irs-max {
+      display: none;
+    }
+
+    .irs--flat .irs-bar--single {
+      top: -12px;
+      border-radius: 0 0 0 5px;
+      height: 4px;
+      background-image: -moz-linear-gradient(0deg, rgb(26, 181, 48) 0%, rgb(213, 249, 0) 100%);
+      background-image: -webkit-linear-gradient(0deg, rgb(26, 181, 48) 0%, rgb(213, 249, 0) 100%);
+    }
+
+    .irs--flat {
+      height: 5px;
+    }
+
+    .irs--flat .irs-line {
+      height: 4px;
+      border-radius: 0 0 5px 5px;
+      background-color: $calc-credit;
+      top: -12px;
+    }
+
+    .irs--flat .irs-handle {
+      width: 21px;
+      height: 21px;
+      border-radius: 50%;
+      background-color: #fff;
+      box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.4);
+      top: -20px;
+      cursor: pointer;
+    }
+
+    .irs--flat .irs-handle > i:first-child {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: $accent-green;
+      top: 50%;
+      left: 6px;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__content-title {
+    font-size: 16px;
+    line-height: 1.5;
+    @extend %gilroy-700;
+    margin-bottom: 15px;
+  }
+
+  &__formbox {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+
+    @media (max-width: 580px) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__formbox .jq-selectbox__select {
+    @media (max-width: 580px) {
+      width: 100%;
+    }
+  }
+
+  &__select {
+    @media (max-width: 580px) {
+      width: 100%;
+      margin-bottom: 15px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .jq-selectbox__select {
+    box-shadow: none;
+    border: 1px solid $calc-credit;
+    width: 213px;
+    margin-right: 0;
+
+    @media (max-width: 580px) {
+      width: 100%;
+    }
+  }
+
+  .modal-select__label {
+    width: 100%;
+    border: 1px solid $calc-credit;
+    height: 45px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 12px;
+    font-size: 15px;
+    color: $choose-text;
+    border-radius: 4px;
+  }
+
+  .modal-select__time {
+    color: $top-menu;
+    font-weight: 500;
+  }
+
+  &__select-widebox {
+    &--date {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__select-widebox .jq-selectbox__select {
+    width: 100%;
+  }
+
+  &__select--wide {
+    width: 100%;
+  }
+
+  &__inputs {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 35px;
+
+    @media (max-width: 580px) {
+      display: block;
+    }
+  }
+
+  &__input {
+    width: 213px;
+    height: 45px;
+    border: 1px solid $calc-credit;
+    border-radius: 4px;
+    padding: 0 12px;
+
+    @media (max-width: 580px) {
+      width: 100%;
+      margin-bottom: 15px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__btn {
+    width: 100%;
+    height: 45px;
+    border: none;
+    background-color: $accent-green;
+    color: #fff;
+    @extend %gilroy-500;
+    border-radius: 4px;
+  }
+}

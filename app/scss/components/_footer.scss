@@ -1,0 +1,93 @@
+.footer {
+  background-color: $top-menu;
+
+  &__inner {
+    padding: 60px 0 65px;
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: 870px) {
+      flex-wrap: wrap;
+      padding: 50px 0 20px;
+    }
+  }
+
+  &__items {
+    width: 170px;
+
+    @media (max-width: 870px) {
+      width: 100%;
+      margin-bottom: 20px;
+      border-bottom: 1px solid rgba(120, 129, 137, 0.3);
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+  }
+
+  &__title {
+    font-size: 14px;
+    color: #fff;
+    @extend %gilroy-700;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+
+  &__list {
+    padding-bottom: 10px;
+  }
+
+  &__link {
+    &:hover {
+      color: #fff;
+      transition: color 0.5s;
+    }
+  }
+
+  &__link,
+  &__bottom,
+  &__item {
+    font-size: 14px;
+    line-height: 2;
+    color: $footer-text;
+    @extend %commissioner-300;
+  }
+
+  &__socials {
+    display: flex;
+  }
+
+  &__item--address {
+    margin-bottom: 20px;
+  }
+
+  &__socials-link {
+    position: relative;
+    margin-right: 15px;
+    display: block;
+    width: 20px;
+    height: 20px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  &__bottom {
+    border-top: 1px solid $footer-line;
+    padding: 20px 0;
+  }
+
+  &__bottom-inner {
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: 360px) {
+      display: block;
+    }
+  }
+}

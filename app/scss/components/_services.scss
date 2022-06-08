@@ -1,0 +1,33 @@
+.services {
+  padding: 75px 0 90px;
+  
+  @media (max-width: 730px) {
+   padding: 50px 0 50px;
+  }
+
+  &__title {
+    margin-bottom: 15px;
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 1.5;
+    @extend %commissioner-400;
+    color: $top-menu;
+  }
+
+  &__inner {
+    padding-left: 100px;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 76px;
+      height: 86px;
+      background-image: url(../images/png/services.png);
+      left: 0;
+      top: 0;
+    }
+  }
+}

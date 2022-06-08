@@ -1,0 +1,169 @@
+.credit-calc {
+  padding: 85px 0 105px;
+
+  @media (max-width: 620px) {
+    padding: 40px 0 50px;
+  }
+
+  &__title {
+    margin-bottom: 35px;
+  }
+
+  .filter-price__label {
+    color: $top-menu;
+    border-color: $calc-credit;
+  }
+
+  .filter-price__fromto {
+    color: $input-text;
+    @extend %commissioner-400;
+  }
+
+  .filter-price__form-box {
+    max-width: 970px;
+    margin-bottom: 30px;
+    justify-content: flex-start;
+
+    &--term {
+      margin-bottom: 35px;
+    }
+
+    @media (max-width: 1100px) {
+      display: block;
+    }
+  }
+
+  .filter-price__form {
+    max-width: 610px;
+    margin-right: 100px;
+
+    @media (max-width: 1100px) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__rate-box {
+    font-size: 16px;
+    line-height: 1.3;
+    @extend %commissioner-400;
+    color: $input-text;
+  }
+
+  &__rate-num {
+    font-size: 48px;
+    color: $top-menu;
+    @extend %gilroy-800;
+    position: relative;
+
+    span {
+      &::after {
+        content: "";
+        position: absolute;
+        width: 25px;
+        height: 2px;
+        background-color: $top-menu;
+        bottom: 8px;
+        right: 0px;
+
+        @media (max-width: 1100px) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__btn-box {
+    display: flex;
+    max-width: 914px;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (max-width: 1100px) {
+      display: block;
+    }
+  }
+
+  &__btn-text {
+    font-size: 16px;
+    color: $input-text;
+    @extend %commissioner-400;
+
+    @media (max-width: 1100px) {
+      margin-bottom: 20px;
+    }
+  }
+
+  .filter-price__btn {
+    height: 45px;
+    width: 205px;
+  }
+
+  .filter-price__days-to,
+  .filter-price__sum-to {
+    display: none;
+  }
+
+  .irs--flat .irs-min,
+  .irs--flat .irs-max,
+  .irs--flat .irs-single {
+    display: none;
+  }
+
+  .irs--flat .irs-line {
+    top: -13px;
+    height: 5px;
+    background-color: $calc-credit;
+    border-radius: 0 0 5px 5px;
+  }
+
+  .irs--flat .irs-bar--single {
+    border-radius: 0 0 0 5px;
+  }
+
+  .irs--flat .irs-bar {
+    top: -13px;
+    height: 5px;
+    background-image: -webkit-linear-gradient(0deg, rgb(26, 181, 48) 0%, rgb(213, 249, 0) 100%);
+  }
+
+  .irs--flat .irs-handle {
+    top: -25px;
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0px 0px 11px 0px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+  }
+
+  .irs--flat .irs-handle > i:first-child {
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 50%;
+    width: 15px;
+    height: 15px;
+    margin-left: 0px;
+    background-color: $accent-green;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+  }
+
+  .irs--flat {
+    height: 5px;
+  }
+
+  .filter-price__cost {
+    span {
+      &::after {
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 1px;
+        background-color: $top-menu;
+        bottom: 0;
+        right: 0px;
+      }
+    }
+  }
+}

@@ -1,0 +1,67 @@
+.insurance-partner {
+  padding: 95px 0 115px;
+
+  @media (max-width: 990px) {
+   padding: 40px 0 40px;
+  }
+
+  &__title {
+    margin-bottom: 45px;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (max-width: 1150px) {
+     display: block;
+    }
+  }
+
+  &__image {
+    width: 306px;
+    height: 192px;
+    margin-right: 25px;
+
+    @media (max-width: 1150px) {
+     margin-bottom: 25px;
+     margin-right: 0;
+    }
+
+    @media (max-width: 390px) {
+     margin: 0 auto 20px;
+    }
+  }
+
+  &__img {
+    width: 306px;
+    height: 192px;
+    object-fit: cover;
+
+    @media (max-width: 340px) {
+     width: 90%;
+     height: 90%;
+    }
+  }
+
+  &__text {
+    max-width: 790px;
+    font-size: 16px;
+    line-height: 1.5;
+    @extend %commissioner-400;
+    color: $top-menu;
+
+    @media (max-width: 1150px) {
+     max-width: 100%;
+    }
+
+    p {
+      margin-bottom: 25px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

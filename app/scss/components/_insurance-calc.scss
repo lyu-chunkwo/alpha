@@ -1,0 +1,186 @@
+.insurance-calc {
+  background-color: $conditions-bg;
+  padding: 90px 0;
+
+  @media (max-width: 990px) {
+    padding: 45px 0;
+  }
+
+  &__title {
+    margin-bottom: 40px;
+  }
+
+  &__form-box {
+    display: flex;
+    margin-bottom: 30px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    @media (max-width: 990px) {
+      display: block;
+    }
+  }
+
+  &__form {
+    max-width: 610px;
+    width: 100%;
+    margin-right: 100px;
+
+    @media (max-width: 1020px) {
+      margin-right: 50px;
+    }
+
+    @media (max-width: 990px) {
+      margin-bottom: 20px;
+      max-width: 100%;
+    }
+  }
+
+  &__label {
+    border: 1px solid $calc-credit;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 60px;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #fff;
+    border-bottom: none;
+  }
+
+  &__text {
+    margin-right: 20px;
+  }
+
+  &__text,
+  &__cost {
+    font-size: 18px;
+    line-height: 1.33;
+    @extend %gilroy-500;
+    @media (max-width: 560px) {
+      font-size: 15px;
+    }
+  }
+
+  &__cost {
+    display: flex;
+    font-weight: 600;
+    position: relative;
+
+    span {
+      &::after {
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 2px;
+        background-color: $top-menu;
+        bottom: 0;
+        right: 0;
+      }
+    }
+  }
+
+  &__rate-num {
+    font-size: 48px;
+    @extend %gilroy-800;
+    color: $top-menu;
+    line-height: 1.1;
+    position: relative;
+
+    span {
+      &::after {
+        content: "";
+        position: absolute;
+        width: 25px;
+        height: 3px;
+        background-color: $top-menu;
+        bottom: 0;
+        left: 232px;
+      }
+    }
+  }
+
+  &__sum-to,
+  &__month-to {
+    display: none;
+  }
+
+  &__fromto {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    line-height: 1.5;
+    @extend %commissioner-400;
+    color: $choose-text;
+    padding-top: 10px;
+  }
+
+  &__rate-box {
+    font-size: 16px;
+    line-height: 1.5;
+    @extend %commissioner-400;
+    color: $choose-text;
+
+    &--month {
+      padding-top: 20px;
+    }
+  }
+
+  .irs--flat {
+    height: 0;
+  }
+
+  .irs-single {
+    display: none;
+  }
+
+  .irs-min,
+  .irs-max {
+    display: none;
+  }
+
+  .irs-line {
+    top: -14px;
+    border-radius: 0 0 5px 5px;
+    height: 6px;
+    background-color: $calc-credit;
+  }
+
+  .irs-bar--single {
+    border-radius: 0 0 0 5px;
+    top: -14px;
+    height: 6px;
+  }
+
+  .irs-bar {
+    background-image: -webkit-linear-gradient(0deg, rgb(26, 181, 48) 0%, rgb(213, 249, 0) 100%);
+  }
+
+  .irs-handle {
+    top: -26px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 0px 0px 11px 0px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+
+    &:hover .irs--flat .irs-handle > i:first-child {
+      background-color: $accent-green;
+    }
+  }
+
+  .irs--flat .irs-handle > i:first-child {
+    position: absolute;
+    display: block;
+    background-color: $accent-green;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    top: 50%;
+    left: 8px;
+    transform: translateY(-50%);
+  }
+}

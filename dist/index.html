@@ -1,0 +1,1698 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <link rel="icon" href="favicon.png" type="image/x-icon" />
+  <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alpha project</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link rel="stylesheet" href="css/style.min.css" />
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__inner">
+      <div class="container">
+        <div class="header__top">
+          <a href="#" class="header__logotype header--item">
+            <img class="header-logo" src="images/content-img/logo.png" alt="Logotype" />
+          </a>
+          <nav class="header__top-menu header--item">
+            <ul class="header__top-list">
+              <li class="header__top-item">
+                <button class="header__top-link" type="button" data-toggle="modal" data-target="#myModal">
+                  Тест-драйв
+                </button>
+                <div class="modal fade" id="myModal">
+                  <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"></button>
+                      </div>
+
+                      <h3 class="modal-title">Записаться на тест-драйв</h3>
+
+                      <div class="modal-body">
+                        <h3 class="modal__content-title">Выберите автомобиль</h3>
+
+                        <form class="modal__form" action="#">
+                          <div class="modal__formbox">
+                            <select class="modal__select modal__select--narrow" name="modal__model" id="modal__model">
+                              <option value="hyundai">Hyundai</option>
+                            </select>
+                            <select class="modal__select" name="modal__mark" id="modal__mark">
+                              <option value="solaris">Solaris</option>
+                            </select>
+                          </div>
+
+                          <div class="modal__select-widebox">
+                            <select class="modal__select modal__select--wide" name="generation" id="generation">
+                              <option value="2019">Hyundai Solaris, 2019 г., Автомат</option>
+                            </select>
+                          </div>
+                        </form>
+
+                        <h3 class="modal__content-title">Дата и контакты</h3>
+                        <form class="modal__form modal__form--date" action="#">
+                          <div class="modal__select-widebox modal__select-widebox--date">
+                            <select class="modal__select modal__select--wide" name="date" id="date">
+                              <option value="__select">Веберите дату тест-драйва</option>
+                            </select>
+                          </div>
+
+                          <label class="modal-select__label">
+                            <div class="modal-select__text">Выберите время:</div>
+                            <div class="modal-select__time">16:30</div>
+                          </label>
+                          <input class="modal-select__time-input" id="modal-select" type="text" data-min="09.00"
+                            data-max="17.30" step="0.1" data-from="16.3">
+
+                          <div class="modal__inputs">
+                            <input class="modal__input" type="text" placeholder="Ваше имя">
+                            <input class="modal__input" type="text" placeholder="Номер телефона">
+                          </div>
+                          <button class="modal__btn" type="submit">Оставить заявку</button>
+                        </form>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="header__top-item">
+                <a class="header__top-link" href="contacts.html">Контакты</a>
+              </li>
+              <li class="header__top-item header__top-item--drop">
+                <a class="header__top-link" href="#">Ещё</a>
+                <ul class="header__topsubmenu">
+                  <li class="header__topsubmenu-item">
+                    <a href="insurance.html" class="header__topsubmenu-link">Страхование</a>
+                  </li>
+                  <li class="header__topsubmenu-item">
+                    <a href="about.html" class="header__topsubmenu-link">О нас</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+
+          <ul class="header__contacts header--item">
+            <li class="header__contacts-item header__contacts-item--watch">
+              Ежедневно с 8:00 до 20:00
+            </li>
+            <li class="header__contacts-item header__contacts-item--marker">
+              Бишкек, ул. Киевская 356 е
+            </li>
+          </ul>
+
+          <ul class="header__buttons header--item">
+            <li class="header__num">
+              <a class="header__num-link" href="tel:+996709000000">0 709 00-00-00</a>
+            </li>
+            <ul class="header__buttons-box">
+              <li class="header__btn">
+                <button class="header__button" type="button">
+                  Заказать звонок
+                </button>
+              </li>
+              <li class="header__btn header__btn--border">
+                <a href="#" class="header__link"> Кабинет </a>
+              </li>
+
+            </ul>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <nav class="menu">
+      <div class="container">
+        <button class="menu__btn" type="button">
+          <span></span>
+        </button>
+        <ul class="menu__list">
+          <li class="menu__item menu__item--a">
+            <a class="menu__link menu__link--allauto" href="#">Автомобили</a>
+            <ul class="menu__submenu">
+              <li class="menu__submenunested-link">
+
+                <ul class="menu__submenunested-list">
+                  <li class="menu__submenu-item">
+                    <a class="menu__submenu-link" href="all-autos.html">
+                      Все автомобили
+                    </a>
+                  </li>
+                  <li class="menu__submenu-item">
+                    <a class="menu__submenu-link" href="#">
+                      Новые автомобили
+                    </a>
+                  </li>
+                  <li class="menu__submenu-item">
+                    <a class="menu__submenu-link" href="#">
+                      Автомобили с пробегом
+                    </a>
+                  </li>
+                  <li class="menu__submenu-item">
+                    <a class="menu__submenu-link" href="#">
+                      Mалолитражные автомобили
+                    </a>
+                  </li>
+                  <li class="menu__submenu-item">
+                    <a class="menu__submenu-link" href="#">
+                      Внедорожники и кроссоверы
+                    </a>
+                  </li>
+                  <li class="menu__submenu-item menu__submenu-item--wide">
+                    <a class="menu__submenu-link" href="#">
+                      Коммерческий транспорт и спецтехника
+                    </a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="menu__submenunested-link">
+                <ul class="brands__list">
+                  <li class="brands__item">
+                    <span class="brands__num">14</span>
+                    <a href="#"><img class="brands__img" src="images/png/brands/1.png" alt="Audi" /></a>
+                    <a href="#"><span class="brands__name">Audi</span></a>
+                  </li>
+                  <li class="brands__item">
+                    <span class="brands__num">8</span>
+                    <a href=""><img class="brands__img" src="images/png/brands/2.png" alt="Brilliance" /></a>
+                    <a href="#"><span class="brands__name">Brilliance</span></a>
+                  </li>
+                  <li class="brands__item">
+                    <span class="brands__num">27</span>
+                    <a href="#"><img class="brands__img" src="images/png/brands/3.png" alt="Changan" /></a>
+                    <a href="#"><span class="brands__name">Changan</span></a>
+                  </li>
+                  <li class="brands__item">
+                    <span class="brands__num">11</span>
+                    <a href="#"><img class="brands__img" src="images/png/brands/4.png" alt="Chery" /></a>
+                    <a href="#"><span class="brands__name">Chery</span></a>
+                  </li>
+                  <li class="brands__item">
+                    <span class="brands__num">20</span>
+                    <a href="#"><img class="brands__img" src="images/png/brands/5.png" alt="Chevrolet" /></a>
+                    <a href="#"><span class="brands__name">Chevrolet</span></a>
+                  </li>
+                  <li class="brands__item">
+                    <span class="brands__num">13</span>
+                    <a href="#"><img class="brands__img" src="images/png/brands/6.png" alt="Citroen" /></a>
+                    <a href="#"><span class="brands__name">Citroen</span></a>
+                  </li>
+                  <li class="brands__item">
+                    <span class="brands__num">4</span>
+                    <a href="#"><img class="brands__img" src="images/png/brands/7.png" alt="Datsun" /></a>
+                    <a href="#"><span class="brands__name">Datsun</span></a>
+                  </li>
+                  <li class="brands__item">
+                    <span class="brands__num">49</span>
+                    <a href="#"><img class="brands__img" src="images/png/brands/8.png" alt="Dongfeng" /></a>
+                    <a href="#"><span class="brands__name">Dongfeng</span></a>
+                  </li>
+                  <li class="brands__item">
+                    <span class="brands__num">6</span>
+                    <a href="#"><img class="brands__img" src="images/png/brands/9.png" alt="Hower" /></a>
+                    <a href="#"><span class="brands__name">Hower</span></a>
+                  </li>
+                  <li class="brands__item">
+                    <span class="brands__num">15</span>
+                    <a href="#"><img class="brands__img" src="images/png/brands/10.png" alt="FAW" /></a>
+                    <a href="#"><span class="brands__name">FAW</span></a>
+                  </li>
+                  <li class="brands__item">
+                    <span class="brands__num">10</span>
+                    <a href="#"><img class="brands__img" src="images/png/brands/11.png" alt="Ford" /></a>
+                    <a href="#"><span class="brands__name">Ford</span></a>
+                  </li>
+                  <li class="brands__item">
+                    <span class="brands__num">12</span>
+                    <a href="#"><img class="brands__img" src="images/png/brands/12.png" alt="Foton" /></a>
+                    <a href="#"><span class="brands__name">Foton</span></a>
+                  </li>
+                  <li class="brands__item">
+                    <span class="brands__num">5</span>
+                    <a href="#"><img class="brands__img" src="images/png/brands/13.png" alt="Geely" /></a>
+                    <a href="#"><span class="brands__name">Geely</span></a>
+                  </li>
+                  <li class="brands__item">
+                    <span class="brands__num">17</span>
+                    <a href="#"><img class="brands__img" src="images/png/brands/14.png" alt="Great Wall" /></a>
+                    <a href="#"><span class="brands__name">Great Wall</span></a>
+                  </li>
+                  <li class="brands__item">
+                    <span class="brands__num">1</span>
+                    <a href="#"><img class="brands__img" src="images/png/brands/15.png" alt="Haval" /></a>
+                    <a href="#"><span class="brands__name">Haval</span></a>
+                  </li>
+                  <li class="brands__item">
+                    <span class="brands__num">5</span>
+                    <a href="#"><img class="brands__img" src="images/png/brands/16.png" alt="Hawtai" /></a>
+                    <a href="#"><span class="brands__name">Hawtai</span></a>
+                  </li>
+                  <li class="brands__item">
+                    <span class="brands__num">28</span>
+                    <a href="#"><img class="brands__img" src="images/png/brands/17.png" alt="Honda" /></a>
+                    <a href="#"><span class="brands__name">Honda</span></a>
+                  </li>
+                  <li class="brands__item">
+                    <span class="brands__num">42</span>
+                    <a href="#"><img class="brands__img" src="images/png/brands/18.png" alt="Hyundai" /></a>
+                    <a href="#"><span class="brands__name">Hyundai</span></a>
+                  </li>
+                  <li class="brands__item">
+                    <span class="brands__num">7</span>
+                    <a href="#"><img class="brands__img" src="images/png/brands/19.png" alt="JAC" /></a>
+                    <a href="#"><span class="brands__name">JAC</span></a>
+                  </li>
+                  <li class="brands__item">
+                    <span class="brands__num">8</span>
+                    <a href="#"><img class="brands__img" src="images/png/brands/20.png" alt="Jeep" /></a>
+                    <a href="#"><span class="brands__name">Jeep</span></a>
+                  </li>
+                  <li class="brands__item">
+                    <span class="brands__num">22</span>
+                    <a href="#"><img class="brands__img" src="images/png/brands/21.png" alt="KIA" /></a>
+                    <a href="#"><span class="brands__name">KIA</span></a>
+                  </li>
+                  <li class="brands__item">
+                    <span class="brands__num">9</span>
+                    <a href="#"><img class="brands__img" src="images/png/brands/22.png" alt="Lada" /></a>
+                    <a href="#"><span class="brands__name">Lada</span></a>
+                  </li>
+                  <li class="brands__item">
+                    <span class="brands__num">1</span>
+                    <a href="#"><img class="brands__img" src="images/png/brands/23.png" alt="Lifan" /></a>
+                    <a href="#"><span class="brands__name">Lifan</span></a>
+                  </li>
+                  <li class="brands__item">
+                    <span class="brands__num">18</span>
+                    <a href="#"><img class="brands__img" src="images/png/brands/24.png" alt="Mazda" /></a>
+                    <a href="#"><span class="brands__name">Mazda</span></a>
+                  </li>
+                  <li class="brands__item">
+                    <span class="brands__num">10</span>
+                    <a href="#"><img class="brands__img" src="images/png/brands/25.png" alt="Mitsubishi" /></a>
+                    <a href="#"><span class="brands__name">Mitsubishi</span></a>
+                  </li>
+                  <li class="brands__item">
+                    <span class="brands__num">20</span>
+                    <a href="#"><img class="brands__img" src="images/png/brands/26.png" alt="Nissan" /></a>
+                    <a href="#"><span class="brands__name">Nissan</span></a>
+                  </li>
+                  <li class="brands__item">
+                    <span class="brands__num">12</span>
+                    <a href="#"><img class="brands__img" src="images/png/brands/27.png" alt="Opel" /></a>
+                    <a href="#"><span class="brands__name">Opel</span></a>
+                  </li>
+                  <li class="brands__item">
+                    <span class="brands__num">8</span>
+                    <a href="#"><img class="brands__img" src="images/png/brands/28.png" alt="Peugeot" /></a>
+                    <a href="#"><span class="brands__name">Peugeot</span></a>
+                  </li>
+                  <li class="brands__item">
+                    <span class="brands__num">3</span>
+                    <a href="#"><img class="brands__img" src="images/png/brands/29.png" alt="Ravon" /></a>
+                    <a href="#"><span class="brands__name">Ravon</span></a>
+                  </li>
+                  <li class="brands__item">
+                    <span class="brands__num">7</span>
+                    <a href="#"><img class="brands__img" src="images/png/brands/30.png" alt="Ranault" /></a>
+                    <a href="#"><span class="brands__name">Ranault</span></a>
+                  </li>
+                  <li class="brands__item">
+                    <span class="brands__num">1</span>
+                    <a href="#"><img class="brands__img" src="images/png/brands/31.png" alt="Skoda" /></a>
+                    <a href="#"><span class="brands__name">Skoda</span></a>
+                  </li>
+                  <li class="brands__item">
+                    <span class="brands__num">2</span>
+                    <a href="#"><img class="brands__img" src="images/png/brands/32.png" alt="SsangYong" /></a>
+                    <a href="#"><span class="brands__name">SsangYong</span></a>
+                  </li>
+                  <li class="brands__item">
+                    <span class="brands__num">30</span>
+                    <a href="#"><img class="brands__img" src="images/png/brands/33.png" alt="Subaru" /></a>
+                    <a href="#"><span class="brands__name">Subaru</span></a>
+                  </li>
+                  <li class="brands__item">
+                    <span class="brands__num">19</span>
+                    <a href="#"><img class="brands__img" src="images/png/brands/34.png" alt="Suzuki" /></a>
+                    <a href="#"><span class="brands__name">Suzuki</span></a>
+                  </li>
+                  <li class="brands__item">
+                    <span class="brands__num">25</span>
+                    <a href="#"><img class="brands__img" src="images/png/brands/35.png" alt="Toyota" /></a>
+                    <a href="#"><span class="brands__name">Toyota</span></a>
+                  </li>
+                  <li class="brands__item">
+                    <span class="brands__num">11</span>
+                    <a href="#"><img class="brands__img" src="images/png/brands/36.png" alt="Audi" /></a>
+                    <a href="#"><span class="brands__name">Audi</span></a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="menu__item menu__item--b">
+            <a class="menu__link menu__link--lombard" href="autolombard.html">Автоломбард</a>
+          </li>
+          <li class="menu__item menu__item--c">
+            <a class="menu__link menu__link--without" href="no-arrest.html">Авто без изъятия</a>
+          </li>
+          <li class="menu__item menu__item--d">
+            <a class="menu__link menu__link--installment" href="installment.html">Рассрочка</a>
+          </li>
+          <li class="menu__item menu__item--e">
+            <a class="menu__link menu__link--credit" href="credit.html">Кредит</a>
+          </li>
+          <li class="menu__item menu__item--f">
+            <a class="menu__link menu__link--tradein" href="tradein.html">Обмен/Trade-in</a>
+          </li>
+          <li class="menu__item menu__item--g">
+            <a class="menu__link menu__link--redemption" href="redemtion.html">Выкуп авто</a>
+          </li>
+          <li class="menu__item menu__item--h">
+            <a class="menu__link menu__link--mediator" href="mediator.html">Посредник</a>
+          </li>
+          <li class="menu__item menu__item--i">
+            <a class="menu__link menu__link--selection" href="selection.html">Автоподбор</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <ul class="slider">
+      <li class="slider__item" style="background-image: url(images/content-img/slide.jpg)">
+        <div class="container">
+          <div class="slider__inner">
+            <h2 class="slider__title wow animate__fadeInLeft" data-wow-delay="0.3s">
+              <p>Рассрочка и кредит на все марки авто</p>
+            </h2>
+            <div class="slider__text wow animate__fadeInLeft" data-wow-delay="0.5s">
+              <p>Выгода до 114 000 сомов</p>
+            </div>
+            <a class="slider__link" href="#">Подробнее</a>
+          </div>
+        </div>
+      </li>
+
+      <li class="slider__item" style="background-image: url(images/content-img/slide.jpg)">
+        <div class="container">
+          <div class="slider__inner">
+            <h2 class="slider__title">
+              <p>Рассрочка и кредит на все марки авто</p>
+            </h2>
+            <div class="slider__text">
+              <p>Выгода до 114 000 сомов</p>
+            </div>
+            <a class="slider__link" href="#">Подробнее</a>
+          </div>
+        </div>
+      </li>
+
+      <li class="slider__item" style="background-image: url(images/content-img/slide.jpg)">
+        <div class="container">
+          <div class="slider__inner">
+            <h2 class="slider__title">
+              <p>Рассрочка и кредит на все марки авто</p>
+            </h2>
+            <div class="slider__text">
+              <p>Выгода до 114 000 сомов</p>
+            </div>
+            <a class="slider__link" href="#">Подробнее</a>
+          </div>
+        </div>
+      </li>
+
+      <li class="slider__item" style="background-image: url(images/content-img/slide.jpg)">
+        <div class="container">
+          <div class="slider__inner">
+            <h2 class="slider__title">
+              <p>Рассрочка и кредит на все марки авто</p>
+            </h2>
+            <div class="slider__text">
+              <p>Выгода до 114 000 сомов</p>
+            </div>
+            <a class="slider__link" href="#">Подробнее</a>
+          </div>
+        </div>
+      </li>
+
+      <li class="slider__item" style="background-image: url(images/content-img/slide.jpg)">
+        <div class="container">
+          <div class="slider__inner">
+            <h2 class="slider__title">
+              <p>Рассрочка и кредит на все марки авто</p>
+            </h2>
+            <div class="slider__text">
+              <p>Выгода до 114 000 сомов</p>
+            </div>
+            <a class="slider__link" href="#">Подробнее</a>
+          </div>
+        </div>
+      </li>
+    </ul>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="brands">
+      <div class="container">
+        <ul class="brands__list">
+          <li class="brands__item">
+            <span class="brands__num">14</span>
+            <a href="#"><img class="brands__img wow animate__fadeInDown" data-wow-delay="0.5s"
+                src="images/png/brands/1.png" alt="Audi" /></a>
+            <a href="#"><span class="brands__name">Audi</span></a>
+          </li>
+          <li class="brands__item">
+            <span class="brands__num">8</span>
+            <a href=""><img class="brands__img wow animate__fadeInDown" data-wow-delay="0.5s"
+                src="images/png/brands/2.png" alt="Brilliance" /></a>
+            <a href=""><span class="brands__name">Brilliance</span></a>
+          </li>
+          <li class="brands__item">
+            <span class="brands__num">27</span>
+            <a href="#"><img class="brands__img wow animate__fadeInDown" data-wow-delay="0.5s"
+                src="images/png/brands/3.png" alt="Changan" /></a>
+            <a href="#"><span class="brands__name">Changan</span></a>
+          </li>
+          <li class="brands__item">
+            <span class="brands__num">11</span>
+            <a href="#"><img class="brands__img wow animate__fadeInDown" data-wow-delay="0.5s"
+                src="images/png/brands/4.png" alt="Chery" /></a>
+            <a href="#"><span class="brands__name">Chery</span></a>
+          </li>
+          <li class="brands__item">
+            <span class="brands__num">20</span>
+            <a href="#"><img class="brands__img wow animate__fadeInDown" data-wow-delay="0.5s"
+                src="images/png/brands/5.png" alt="Chevrolet" /></a>
+            <a href="#"><span class="brands__name">Chevrolet</span></a>
+          </li>
+          <li class="brands__item">
+            <span class="brands__num">13</span>
+            <a href="#"><img class="brands__img wow animate__fadeInDown" data-wow-delay="0.5s"
+                src="images/png/brands/6.png" alt="Citroen" /></a>
+            <a href="#"><span class="brands__name">Citroen</span></a>
+          </li>
+          <li class="brands__item">
+            <span class="brands__num">4</span>
+            <a href="#"><img class="brands__img wow animate__fadeInDown" data-wow-delay="0.5s"
+                src="images/png/brands/7.png" alt="Datsun" /></a>
+            <a href="#"><span class="brands__name">Datsun</span></a>
+          </li>
+          <li class="brands__item">
+            <span class="brands__num">49</span>
+            <a href="#"><img class="brands__img wow animate__fadeInDown" data-wow-delay="0.5s"
+                src="images/png/brands/8.png" alt="Dongfeng" /></a>
+            <a href="#"><span class="brands__name">Dongfeng</span></a>
+          </li>
+          <li class="brands__item">
+            <span class="brands__num">6</span>
+            <a href="#"><img class="brands__img wow animate__fadeInDown" data-wow-delay="0.5s"
+                src="images/png/brands/9.png" alt="Hower" /></a>
+            <a href="#"><span class="brands__name">Hower</span></a>
+          </li>
+          <li class="brands__item">
+            <span class="brands__num">15</span>
+            <a href="#"><img class="brands__img wow animate__fadeInDown" data-wow-delay="0.5s"
+                src="images/png/brands/10.png" alt="FAW" /></a>
+            <a href="#"><span class="brands__name">FAW</span></a>
+          </li>
+          <li class="brands__item">
+            <span class="brands__num">10</span>
+            <a href="#"><img class="brands__img wow animate__fadeInDown" data-wow-delay="0.5s"
+                src="images/png/brands/11.png" alt="Ford" /></a>
+            <a href="#"><span class="brands__name">Ford</span></a>
+          </li>
+          <li class="brands__item">
+            <span class="brands__num">12</span>
+            <a href="#"><img class="brands__img wow animate__fadeInDown" data-wow-delay="0.5s"
+                src="images/png/brands/12.png" alt="Foton" /></a>
+            <a href="#"><span class="brands__name">Foton</span></a>
+          </li>
+          <li class="brands__item">
+            <span class="brands__num">5</span>
+            <a href="#"><img class="brands__img wow animate__fadeInDown" data-wow-delay="1s"
+                src="images/png/brands/13.png" alt="Geely" /></a>
+            <a href="#"><span class="brands__name">Geely</span></a>
+          </li>
+          <li class="brands__item">
+            <span class="brands__num">17</span>
+            <a href="#"><img class="brands__img wow animate__fadeInDown" data-wow-delay="1s"
+                src="images/png/brands/14.png" alt="Great Wall" /></a>
+            <a href="#"><span class="brands__name">Great Wall</span></a>
+          </li>
+          <li class="brands__item">
+            <span class="brands__num">1</span>
+            <a href="#"><img class="brands__img wow animate__fadeInDown" data-wow-delay="1s"
+                src="images/png/brands/15.png" alt="Haval" /></a>
+            <a href="#"><span class="brands__name">Haval</span></a>
+          </li>
+          <li class="brands__item">
+            <span class="brands__num">5</span>
+            <a href="#"><img class="brands__img wow animate__fadeInDown" data-wow-delay="1s"
+                src="images/png/brands/16.png" alt="Hawtai" /></a>
+            <a href="#"><span class="brands__name">Hawtai</span></a>
+          </li>
+          <li class="brands__item">
+            <span class="brands__num">28</span>
+            <a href="#"><img class="brands__img wow animate__fadeInDown" data-wow-delay="1s"
+                src="images/png/brands/17.png" alt="Honda" /></a>
+            <a href="#"><span class="brands__name">Honda</span></a>
+          </li>
+          <li class="brands__item">
+            <span class="brands__num">42</span>
+            <a href="#"><img class="brands__img wow animate__fadeInDown" data-wow-delay="1s"
+                src="images/png/brands/18.png" alt="Hyundai" /></a>
+            <a href="#"><span class="brands__name">Hyundai</span></a>
+          </li>
+          <li class="brands__item">
+            <span class="brands__num">7</span>
+            <a href="#"><img class="brands__img wow animate__fadeInDown" data-wow-delay="1s"
+                src="images/png/brands/19.png" alt="JAC" /></a>
+            <a href="#"><span class="brands__name">JAC</span></a>
+          </li>
+          <li class="brands__item">
+            <span class="brands__num">8</span>
+            <a href="#"><img class="brands__img wow animate__fadeInDown" data-wow-delay="1s"
+                src="images/png/brands/20.png" alt="Jeep" /></a>
+            <a href="#"><span class="brands__name">Jeep</span></a>
+          </li>
+          <li class="brands__item">
+            <span class="brands__num">22</span>
+            <a href="#"><img class="brands__img wow animate__fadeInDown" data-wow-delay="1s"
+                src="images/png/brands/21.png" alt="KIA" /></a>
+            <a href="#"><span class="brands__name">KIA</span></a>
+          </li>
+          <li class="brands__item">
+            <span class="brands__num">9</span>
+            <a href="#"><img class="brands__img wow animate__fadeInDown" data-wow-delay="1s"
+                src="images/png/brands/22.png" alt="Lada" /></a>
+            <a href="#"><span class="brands__name">Lada</span></a>
+          </li>
+          <li class="brands__item">
+            <span class="brands__num">1</span>
+            <a href="#"><img class="brands__img wow animate__fadeInDown" data-wow-delay="1s"
+                src="images/png/brands/23.png" alt="Lifan" /></a>
+            <a href="#"><span class="brands__name">Lifan</span></a>
+          </li>
+          <li class="brands__item">
+            <span class="brands__num">18</span>
+            <a href="#"><img class="brands__img wow animate__fadeInDown" data-wow-delay="1s"
+                src="images/png/brands/24.png" alt="Mazda" /></a>
+            <a href="#"><span class="brands__name">Mazda</span></a>
+          </li>
+          <li class="brands__item">
+            <span class="brands__num">10</span>
+            <a href="#"><img class="brands__img wow animate__fadeInDown" data-wow-delay="1.5s"
+                src="images/png/brands/25.png" alt="Mitsubishi" /></a>
+            <a href="#"><span class="brands__name">Mitsubishi</span></a>
+          </li>
+          <li class="brands__item">
+            <span class="brands__num">20</span>
+            <a href="#"><img class="brands__img wow animate__fadeInDown" data-wow-delay="1.5s"
+                src="images/png/brands/26.png" alt="Nissan" /></a>
+            <a href="#"><span class="brands__name">Nissan</span></a>
+          </li>
+          <li class="brands__item">
+            <span class="brands__num">12</span>
+            <a href="#"><img class="brands__img wow animate__fadeInDown" data-wow-delay="1.5s"
+                src="images/png/brands/27.png" alt="Opel" /></a>
+            <a href="#"><span class="brands__name">Opel</span></a>
+          </li>
+          <li class="brands__item">
+            <span class="brands__num">8</span>
+            <a href="#"><img class="brands__img wow animate__fadeInDown" data-wow-delay="1.5s"
+                src="images/png/brands/28.png" alt="Peugeot" /></a>
+            <a href="#"><span class="brands__name">Peugeot</span></a>
+          </li>
+          <li class="brands__item">
+            <span class="brands__num">3</span>
+            <a href="#"><img class="brands__img wow animate__fadeInDown" data-wow-delay="1.5s"
+                src="images/png/brands/29.png" alt="Ravon" /></a>
+            <a href="#"><span class="brands__name">Ravon</span></a>
+          </li>
+          <li class="brands__item">
+            <span class="brands__num">7</span>
+            <a href="#"><img class="brands__img wow animate__fadeInDown" data-wow-delay="1.5s"
+                src="images/png/brands/30.png" alt="Ranault" /></a>
+            <a href="#"><span class="brands__name">Ranault</span></a>
+          </li>
+          <li class="brands__item">
+            <span class="brands__num">1</span>
+            <a href="#"><img class="brands__img wow animate__fadeInDown" data-wow-delay="1.5s"
+                src="images/png/brands/31.png" alt="Skoda" /></a>
+            <a href="#"><span class="brands__name">Skoda</span></a>
+          </li>
+          <li class="brands__item">
+            <span class="brands__num">2</span>
+            <a href="#"><img class="brands__img wow animate__fadeInDown" data-wow-delay="1.5s"
+                src="images/png/brands/32.png" alt="SsangYong" /></a>
+            <a href="#"><span class="brands__name">SsangYong</span></a>
+          </li>
+          <li class="brands__item">
+            <span class="brands__num">30</span>
+            <a href="#"><img class="brands__img wow animate__fadeInDown" data-wow-delay="1.5s"
+                src="images/png/brands/33.png" alt="Subaru" /></a>
+            <a href="#"><span class="brands__name">Subaru</span></a>
+          </li>
+          <li class="brands__item">
+            <span class="brands__num">19</span>
+            <a href="#"><img class="brands__img wow animate__fadeInDown" data-wow-delay="1.5s"
+                src="images/png/brands/34.png" alt="Suzuki" /></a>
+            <a href="#"><span class="brands__name">Suzuki</span></a>
+          </li>
+          <li class="brands__item">
+            <span class="brands__num">25</span>
+            <a href="#"><img class="brands__img wow animate__fadeInDown" data-wow-delay="1.5s"
+                src="images/png/brands/35.png" alt="Toyota" /></a>
+            <a href="#"><span class="brands__name">Toyota</span></a>
+          </li>
+          <li class="brands__item">
+            <span class="brands__num">11</span>
+            <a href="#"><img class="brands__img wow animate__fadeInDown" data-wow-delay="1.5s"
+                src="images/png/brands/36.png" alt="Audi" /></a>
+            <a href="#"><span class="brands__name">Audi</span></a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="slider-hits">
+      <div class="container">
+        <h3 class="slider-hits__title title">хиты продаж</h3>
+        <div class="slider-hits__inner">
+          <ul class="slider-hits__list slider-hits--top">
+            <li class="slider-hits__item">
+              <div class="slider-hits__item-box">
+                <a href="#" class="slider-hits__image">
+                  <img class="slider-hits__img" src="images/slider-hits/1.png" alt="HYUNDAI Tucson">
+                </a>
+                <div class="slider-hits__links">
+                  <a class="slider-hits__link slider-hits__link--brand" href="#">
+                    HYUNDAI Tucson
+                  </a>
+                  <a class="slider-hits__link slider-hits__link--price" href="#">
+                    от 1 412 000 <span>с</span>
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li class="slider-hits__item">
+              <div class="slider-hits__item-box">
+                <a href="#" class="slider-hits__image">
+                  <img class="slider-hits__img" src="images/slider-hits/2.png" alt="KIA K5">
+                </a>
+                <div class="slider-hits__links">
+                  <a class="slider-hits__link slider-hits__link--brand" href="#">
+                    KIA K5
+                  </a>
+                  <a class="slider-hits__link slider-hits__link--price" href="#">
+                    от 1 600 000 <span>с</span>
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li class="slider-hits__item">
+              <div class="slider-hits__item-box">
+                <a href="#" class="slider-hits__image">
+                  <img class="slider-hits__img" src="images/slider-hits/3.png" alt="CHERY Tiggo 4">
+                </a>
+                <div class="slider-hits__links">
+                  <a class="slider-hits__link slider-hits__link--brand" href="#">
+                    CHERY Tiggo 4
+                  </a>
+                  <a class="slider-hits__link slider-hits__link--price" href="#">
+                    от 870 500 <span>с</span>
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li class="slider-hits__item">
+              <div class="slider-hits__item-box">
+                <a href="#" class="slider-hits__image">
+                  <img class="slider-hits__img" src="images/slider-hits/4.png" alt="HYUNDAI Solaris">
+                </a>
+                <div class="slider-hits__links">
+                  <a class="slider-hits__link slider-hits__link--brand" href="#">
+                    HYUNDAI Solaris
+                  </a>
+                  <a class="slider-hits__link slider-hits__link--price" href="#">
+                    от 610 000 <span>с</span>
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li class="slider-hits__item">
+              <div class="slider-hits__item-box">
+                <a href="#" class="slider-hits__image">
+                  <img class="slider-hits__img" src="images/slider-hits/1.png" alt="HYUNDAI Tucson">
+                </a>
+                <div class="slider-hits__links">
+                  <a class="slider-hits__link slider-hits__link--brand" href="#">
+                    HYUNDAI Tucson
+                  </a>
+                  <a class="slider-hits__link slider-hits__link--price" href="#">
+                    от 1 412 000 <span>с</span>
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li class="slider-hits__item">
+              <div class="slider-hits__item-box">
+                <a href="#" class="slider-hits__image">
+                  <img class="slider-hits__img" src="images/slider-hits/2.png" alt="KIA K5">
+                </a>
+                <div class="slider-hits__links">
+                  <a class="slider-hits__link slider-hits__link--brand" href="#">
+                    KIA K5
+                  </a>
+                  <a class="slider-hits__link slider-hits__link--price" href="#">
+                    от 1 600 000 <span>с</span>
+                  </a>
+                </div>
+              </div>
+            </li>
+          </ul>
+
+          <ul class="slider-hits__list slider-hits--bottom">
+            <li class="slider-hits__item">
+              <div class="slider-hits__item-box">
+                <a href="#" class="slider-hits__image">
+                  <img class="slider-hits__img" src="images/slider-hits/5.png" alt="KIA Stinger">
+                </a>
+                <div class="slider-hits__links">
+                  <a class="slider-hits__link slider-hits__link--brand" href="#">
+                    KIA Stinger
+                  </a>
+                  <a class="slider-hits__link slider-hits__link--price" href="#">
+                    от 2 125 500 <span>с</span>
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li class="slider-hits__item">
+              <div class="slider-hits__item-box">
+                <a href="#" class="slider-hits__image">
+                  <img class="slider-hits__img" src="images/slider-hits/6.png" alt="HYUNDAI Creta">
+                </a>
+                <div class="slider-hits__links">
+                  <a class="slider-hits__link slider-hits__link--brand" href="#">
+                    HYUNDAI Creta
+                  </a>
+                  <a class="slider-hits__link slider-hits__link--price" href="#">
+                    от 1 200 000 <span>с</span>
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li class="slider-hits__item">
+              <div class="slider-hits__item-box">
+                <a href="#" class="slider-hits__image">
+                  <img class="slider-hits__img" src="images/slider-hits/7.png" alt="KIA Soul">
+                </a>
+                <div class="slider-hits__links">
+                  <a class="slider-hits__link slider-hits__link--brand" href="#">
+                    KIA Soul
+                  </a>
+                  <a class="slider-hits__link slider-hits__link--price" href="#">
+                    от 1 053 200 <span>с</span>
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li class="slider-hits__item">
+              <div class="slider-hits__item-box">
+                <a href="#" class="slider-hits__image">
+                  <img class="slider-hits__img" src="images/slider-hits/8.png" alt="PEUGEOT 3008">
+                </a>
+                <div class="slider-hits__links">
+                  <a class="slider-hits__link slider-hits__link--brand" href="#">
+                    PEUGEOT 3008
+                  </a>
+                  <a class="slider-hits__link slider-hits__link--price" href="#">
+                    от 1 714 000 <span>с</span>
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li class="slider-hits__item">
+              <div class="slider-hits__item-box">
+                <a href="#" class="slider-hits__image">
+                  <img class="slider-hits__img" src="images/slider-hits/5.png" alt="KIA Stinger">
+                </a>
+                <div class="slider-hits__links">
+                  <a class="slider-hits__link slider-hits__link--brand" href="#">
+                    KIA Stinger
+                  </a>
+                  <a class="slider-hits__link slider-hits__link--price" href="#">
+                    от 2 125 500 <span>с</span>
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li class="slider-hits__item">
+              <div class="slider-hits__item-box">
+                <a href="#" class="slider-hits__image">
+                  <img class="slider-hits__img" src="images/slider-hits/6.png" alt="HYUNDAI Creta">
+                </a>
+                <div class="slider-hits__links">
+                  <a class="slider-hits__link slider-hits__link--brand" href="#">
+                    HYUNDAI Creta
+                  </a>
+                  <a class="slider-hits__link slider-hits__link--price" href="#">
+                    от 1 200 000 <span>с</span>
+                  </a>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="filter-price" style="background-image: url(images/content-img/filter-bg.jpg);">
+      <div class="container">
+        <div class="filter-price__inner">
+          <img class="filter-price__img wow animate__fadeInLeft" src="images/filters/price/car.png"
+            alt="Filter price image">
+
+          <div class="filter-price__box">
+            <h3 class="filter-price__title">Быстрый подбор автомобиля</h3>
+
+            <div class="filter-price__form-box">
+              <form class="filter-price__form" action="#">
+                <label class="filter-price__label">
+                  <div class="filter-price__text">Укажите стоимость</div>
+                  <div class="filter-price__cost">
+                    <div class="filter-price__from"></div><span>&nbsp с</span>
+                    <div class="filter-price__to"></div>
+                  </div>
+                </label>
+                <input class="filter-price__input" type="text" data-min="300000" data-max="5000000" data-from="2740000">
+                <div class="filter-price__fromto">
+                  <span>от 300 000 с</span>
+                  <span>до 5 000 000 с</span>
+                </div>
+              </form>
+              <button class="filter-price__btn" type="button">Подобрать</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="arrival">
+      <div class="container">
+        <h3 class="arrival__title title">Последние поступления</h3>
+
+        <div class="arrival__box">
+          <ul class="arrival__inner">
+            <li class="arrival__item arrival__item--hit arrival__item--urgently wow animate__fadeInLeft"
+              data-wow-delay="0.5s">
+              <article class="arrival__article">
+                <a class="arrival__img-link" href="#">
+                  <img class="arrival__img" src="images/arrival/1.jpg" alt="Toyota Avensis">
+                  <div class="arrival__plates">
+                    <span class="arrival__plate arrival__plate--hit">хит</span>
+                    <span class="arrival__plate arrival__plate--urgently">срочно</span>
+                  </div>
+                </a>
+                <h3 class="arrival__brand-title">
+                  <a class="arrival__title-link" href="#">Toyota Avensis</a>
+                </h3>
+                <div class="arrival__prices">
+                  <div class="arrival__discount">398 000 <span class="underscore">c</span></div>
+                  <div class="arrival__oldprice">429 000 <span class="underscore">c</span></div>
+                </div>
+                <div class="arrival__info">
+                  <span>2017 г.</span>
+                  <span>163 200 км.</span>
+                  <span>2.4 л.</span>
+                  <span>163 л.с.</span>
+                </div>
+                <div class="arrival__check">
+                  <span class="arrival__check--pts">ПТС в наличии</span>
+                  <span class="arrival__check--vin">VIN проверен</span>
+                </div>
+                <a href="#" class="arrival__credit-link">Купить в кредит</a>
+                <button class="arrival__book-link" type="button">Забронировать</button>
+              </article>
+            </li>
+
+            <li class="arrival__item wow animate__fadeInLeft" data-wow-delay="0.3s">
+              <article class="arrival__article">
+                <a class="arrival__img-link" href="#">
+                  <img class="arrival__img" src="images/arrival/2.jpg" alt="Toyota Avensis">
+                  <div class="arrival__plates">
+                    <span class="arrival__plate arrival__plate--hit"></span>
+                    <span class="arrival__plate arrival__plate--urgently"></span>
+                  </div>
+                </a>
+                <h3 class="arrival__brand-title">
+                  <a class="arrival__title-link" href="#">Mazda 6</a>
+                </h3>
+                <div class="arrival__prices">
+                  <div class="arrival__discount">680 000 <span class="underscore">c</span></div>
+                  <div class="arrival__oldprice">700 000 <span class="underscore">c</span></div>
+                </div>
+                <div class="arrival__info">
+                  <span>2011 г.</span>
+                  <span>97 400 км.</span>
+                  <span>2.0 л.</span>
+                  <span>147 л.с.</span>
+                </div>
+                <div class="arrival__check">
+                  <span class="arrival__check--pts">ПТС в наличии</span>
+                  <span class="arrival__check--vin">VIN проверен</span>
+                </div>
+                <a href="#" class="arrival__credit-link">Купить в кредит</a>
+                <button class="arrival__book-link" type="button">Забронировать</button>
+              </article>
+            </li>
+
+            <li class="arrival__item wow animate__fadeInRight" data-wow-delay="0.3s">
+              <article class="arrival__article">
+                <a class="arrival__img-link" href="#">
+                  <img class="arrival__img" src="images/arrival/3.jpg" alt="Toyota Avensis">
+                  <div class="arrival__plates">
+                    <span class="arrival__plate arrival__plate--hit"></span>
+                    <span class="arrival__plate arrival__plate--urgently"></span>
+                  </div>
+                </a>
+                <h3 class="arrival__brand-title">
+                  <a class="arrival__title-link" href="#">SsangYong Actyon</a>
+                </h3>
+                <div class="arrival__prices">
+                  <div class="arrival__discount">451 000 <span class="underscore">c</span></div>
+                  <div class="arrival__oldprice">497 000 <span class="underscore">c</span></div>
+                </div>
+                <div class="arrival__info">
+                  <span>2011 г.</span>
+                  <span>91 300 км.</span>
+                  <span>2.4 л.</span>
+                  <span>163 л.с.</span>
+                </div>
+                <div class="arrival__check">
+                  <span class="arrival__check--pts">ПТС в наличии</span>
+                  <span class="arrival__check--vin">VIN проверен</span>
+                </div>
+                <a href="#" class="arrival__credit-link">Купить в кредит</a>
+                <button class="arrival__book-link" type="button">Забронировать</button>
+              </article>
+            </li>
+
+            <li class="arrival__item arrival__item--hit wow animate__fadeInRight" data-wow-delay="0.5s">
+              <article class="arrival__article">
+                <a class="arrival__img-link" href="#">
+                  <img class="arrival__img" src="images/arrival/4.jpg" alt="Toyota Avensis">
+                  <div class="arrival__plates">
+                    <span class="arrival__plate arrival__plate--hit">хит</span>
+                    <span class="arrival__plate arrival__plate--urgently"></span>
+                  </div>
+                </a>
+                <h3 class="arrival__brand-title">
+                  <a class="arrival__title-link" href="#">Peugeot 308</a>
+                </h3>
+                <div class="arrival__prices">
+                  <div class="arrival__discount">250 000 <span class="underscore">c</span></div>
+                  <div class="arrival__oldprice">283 000 <span class="underscore">c</span></div>
+                </div>
+                <div class="arrival__info">
+                  <span>2010 г.</span>
+                  <span>89 800 км.</span>
+                  <span>1.6 л.</span>
+                  <span>120 л.с.</span>
+                </div>
+                <div class="arrival__check">
+                  <span class="arrival__check--pts">ПТС в наличии</span>
+                  <span class="arrival__check--vin">VIN проверен</span>
+                </div>
+                <a href="#" class="arrival__credit-link">Купить в кредит</a>
+                <button class="arrival__book-link" type="button">Забронировать</button>
+              </article>
+            </li>
+
+            <li class="arrival__item wow animate__fadeInLeft" data-wow-delay="0.5s">
+              <article class="arrival__article">
+                <a class="arrival__img-link" href="#">
+                  <img class="arrival__img" src="images/arrival/5.jpg" alt="Toyota Avensis">
+                  <div class="arrival__plates">
+                    <span class="arrival__plate arrival__plate--hit"></span>
+                    <span class="arrival__plate arrival__plate--urgently"></span>
+                  </div>
+                </a>
+                <h3 class="arrival__brand-title">
+                  <a class="arrival__title-link" href="#">Mercedes-Benz C-Класс</a>
+                </h3>
+                <div class="arrival__prices">
+                  <div class="arrival__discount">1 155 000 <span class="underscore">c</span></div>
+                  <div class="arrival__oldprice">1 238 000 <span class="underscore">c</span></div>
+                </div>
+                <div class="arrival__info">
+                  <span>2012 г.</span>
+                  <span>103 000 км.</span>
+                  <span>3.5 л.</span>
+                  <span>252 л.с.</span>
+                </div>
+                <div class="arrival__check">
+                  <span class="arrival__check--pts">ПТС в наличии</span>
+                  <span class="arrival__check--vin">VIN проверен</span>
+                </div>
+                <a href="#" class="arrival__credit-link">Купить в кредит</a>
+                <button class="arrival__book-link" type="button">Забронировать</button>
+              </article>
+            </li>
+
+            <li class="arrival__item arrival__item--hit wow animate__fadeInLeft" data-wow-delay="0.3s">
+              <article class="arrival__article">
+                <a class="arrival__img-link" href="#">
+                  <img class="arrival__img" src="images/arrival/6.jpg" alt="Toyota Avensis">
+                  <div class="arrival__plates">
+                    <span class="arrival__plate arrival__plate--hit">хит</span>
+                    <span class="arrival__plate arrival__plate--urgently"></span>
+                  </div>
+                </a>
+                <h3 class="arrival__brand-title">
+                  <a class="arrival__title-link" href="#">Mitsubishi Outlander</a>
+                </h3>
+                <div class="arrival__prices">
+                  <div class="arrival__discount">534 000 <span class="underscore">c</span></div>
+                  <div class="arrival__oldprice">567 000 <span class="underscore">c</span></div>
+                </div>
+                <div class="arrival__info">
+                  <span>2009 г.</span>
+                  <span>129 000 км.</span>
+                  <span>3.0 л.</span>
+                  <span>220 л.с.</span>
+                </div>
+                <div class="arrival__check">
+                  <span class="arrival__check--pts">ПТС в наличии</span>
+                  <span class="arrival__check--vin">VIN проверен</span>
+                </div>
+                <a href="#" class="arrival__credit-link">Купить в кредит</a>
+                <button class="arrival__book-link" type="button">Забронировать</button>
+              </article>
+            </li>
+
+            <li class="arrival__item arrival__item--urgently wow animate__fadeInRight" data-wow-delay="0.3s">
+              <article class="arrival__article">
+                <a class="arrival__img-link" href="#">
+                  <img class="arrival__img" src="images/arrival/7.jpg" alt="Toyota Avensis">
+                  <div class="arrival__plates">
+                    <span class="arrival__plate arrival__plate--hit"></span>
+                    <span class="arrival__plate arrival__plate--urgently">срочно</span>
+                  </div>
+                </a>
+                <h3 class="arrival__brand-title">
+                  <a class="arrival__title-link" href="#">Mitsubishi ASX</a>
+                </h3>
+                <div class="arrival__prices">
+                  <div class="arrival__discount">542 000 <span class="underscore">c</span></div>
+                  <div class="arrival__oldprice">585 000 <span class="underscore">c</span></div>
+                </div>
+                <div class="arrival__info">
+                  <span>2012 г.</span>
+                  <span>164 874 км.</span>
+                  <span>1.8 л.</span>
+                  <span>140 л.с.</span>
+                </div>
+                <div class="arrival__check">
+                  <span class="arrival__check--pts">ПТС в наличии</span>
+                  <span class="arrival__check--vin">VIN проверен</span>
+                </div>
+                <a href="#" class="arrival__credit-link">Купить в кредит</a>
+                <button class="arrival__book-link" type="button">Забронировать</button>
+              </article>
+            </li>
+
+            <li class="arrival__item wow animate__fadeInRight" data-wow-delay="0.5s">
+              <article class="arrival__article">
+                <a class="arrival__img-link" href="#">
+                  <img class="arrival__img" src="images/arrival/8.jpg" alt="Toyota Avensis">
+                  <div class="arrival__plates">
+                    <span class="arrival__plate arrival__plate--hit"></span>
+                    <span class="arrival__plate arrival__plate--urgently"></span>
+                  </div>
+                </a>
+                <h3 class="arrival__brand-title">
+                  <a class="arrival__title-link" href="#">Nissan Teana</a>
+                </h3>
+                <div class="arrival__prices">
+                  <div class="arrival__discount">422 000 <span class="underscore">c</span></div>
+                  <div class="arrival__oldprice">455 000 <span class="underscore">c</span></div>
+                </div>
+                <div class="arrival__info">
+                  <span>2008 г.</span>
+                  <span>100 800 км.</span>
+                  <span>2.5 л.</span>
+                  <span>167 л.с.</span>
+                </div>
+                <div class="arrival__check">
+                  <span class="arrival__check--pts">ПТС в наличии</span>
+                  <span class="arrival__check--vin">VIN проверен</span>
+                </div>
+                <a href="#" class="arrival__credit-link">Купить в кредит</a>
+                <button class="arrival__book-link" type="button">Забронировать</button>
+              </article>
+            </li>
+          </ul>
+        </div>
+
+        <div class="arrival__bottom-link">
+          <a class="arrival__more-link" href="#">
+            <span>Смотреть остальное</span>
+            <svg class="arrival__svg-link" width="5" height="7">
+              <use href="images/svg-sprite/sprite.svg#angle-black"></use>
+            </svg></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="everyone">
+      <div class="container">
+        <h3 class="everyone__title title">Автомобили для всех</h3>
+        <div class="everyone__box">
+          <ul class="everyone__inner">
+            <li class="everyone__item wow animate__fadeInLeft">
+              <a class="everyone__img-link" href="#">
+                <img class="everyone__img" src="images/everyone/1.jpg" alt="Автомобили для всех">
+                <span class="everyone__round"></span>
+              </a>
+              <div class="everyone__text-box">
+                <a class="everyone__titlte-link" href="#">
+                  <h3 class="everyone__item-title">Рассрочка</h3>
+                </a>
+                <div class="everyone__text">
+                  <a class="everyone__text-link" href="#">
+                    Позвольте себе автомобиль при минимальных выплатах
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li class="everyone__item wow animate__fadeInDown">
+              <a class="everyone__img-link" href="#">
+                <img class="everyone__img" src="images/everyone/2.jpg" alt="Автомобили для всех">
+                <span class="everyone__round"></span>
+              </a>
+              <div class="everyone__text-box">
+                <a class="everyone__titlte-link" href="#">
+                  <h3 class="everyone__item-title">Кредит</h3>
+                </a>
+                <div class="everyone__text">
+                  <a class="everyone__text-link" href="#">
+                    Оцените преимущества нашей благоприятной кредитной программы
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li class="everyone__item wow animate__fadeInRight">
+              <a class="everyone__img-link" href="#">
+                <img class="everyone__img" src="images/everyone/3.jpg" alt="Автомобили для всех">
+                <span class="everyone__round"></span>
+              </a>
+              <div class="everyone__text-box">
+                <a class="everyone__titlte-link" href="#">
+                  <h3 class="everyone__item-title">Авто с пробегом</h3>
+                </a>
+                <div class="everyone__text">
+                  <a class="everyone__text-link" href="#">
+                    Более пятидесяти марок автомобилей представлено в нашем салоне
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li class="everyone__item wow animate__fadeInUp">
+              <a class="everyone__img-link" href="#">
+                <img class="everyone__img" src="images/everyone/4.jpg" alt="Автомобили для всех">
+                <span class="everyone__round"></span>
+              </a>
+              <div class="everyone__text-box">
+                <a class="everyone__titlte-link" href="#">
+                  <h3 class="everyone__item-title">Обмен/Trade-in</h3>
+                </a>
+                <div class="everyone__text">
+                  <a class="everyone__text-link" href="#">
+                    Предлагаем обмен вашего старого автомобиля на более новый
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li class="everyone__item everyone__item--wide wow animate__fadeInUp">
+              <a class="everyone__img-link" href="#">
+                <img class="everyone__img everyone__img--wide" src="images/everyone/5.jpg" alt="Автомобили для всех">
+                <span class="everyone__round"></span>
+              </a>
+              <div class="everyone__text-box">
+                <a class="everyone__titlte-link" href="#">
+                  <h3 class="everyone__item-title">Автоподбор</h3>
+                </a>
+                <div class="everyone__text">
+                  <a class="everyone__text-link" href="#">
+                    Найдите то, что вам по вкусу, настроению или карману среди нашего широкого ассортимента.
+                    У всех авто проверен VIN-номер и имеется паспорт технического соответствия
+                  </a>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="blog">
+      <div class="container">
+        <h3 class="blog__title title">Новости</h3>
+        <div class="bottom-">
+          <div class="blog__top">
+            <div class="blog__hot" style="background-image: url(images/blog/bg.jpg);">
+              <span class="blog__label">горячее</span>
+              <h3 class="blog__hot-title">TRD и Mod\ellista представили тюнинг для нового Lexus IS</h3>
+              <a href="#" class="blog__hot-link">
+                <span>Подробнее</span>
+                <svg class="blog__hot-svg" width="5" height="7">
+                  <use href="images/svg-sprite/sprite.svg#angle-right"></use>
+                </svg>
+              </a>
+            </div>
+            <div class="blog__aside">
+              <div class="blog__image">
+                <img class="blog__img" src="images/blog/1.jpg" alt="Картинка из новостей">
+              </div>
+              <span class="blog__date">10 ноября</span>
+              <h3 class="blog__subtitle">
+                Первый кроссовер Ferrari замаскировали под Maserati Levante
+              </h3>
+              <div class="blog__text">
+                Первый кроссовер итальянского бренда, который построят
+                на новой архитектуре и назовут Purosangue («Чистокровный»), представят в 2022 году
+              </div>
+              <div class="blog__link-box">
+                <a class="blog__link" href="#">
+                  <span>Подробнее</span>
+                  <svg class="blog__link-svg" width="5" height="7">
+                    <use href="images/svg-sprite/sprite.svg#angle-green"></use>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="blog__bottom">
+            <ul class="blog__bottom-inner">
+              <li class="blog__item">
+                <span class="blog__date">9 ноября</span>
+                <h3 class="blog__subtitle">
+                  Ford представил новую версию кроссовера EcoSport для бездорожья
+                </h3>
+                <div class="blog__text">
+                  EcoSport стал третьим автомобилем в линейке американского бренда...
+                  , у которого есть модификация Active. На данный момент такая версия существует у моделей Focus и
+                  Fiesta
+                </div>
+                <a class="blog__link" href="#">
+                  <span>Подробнее</span>
+                  <svg class="blog__link-svg" width="5" height="7">
+                    <use href="images/svg-sprite/sprite.svg#angle-green"></use>
+                  </svg>
+                </a>
+              </li>
+
+              <li class="blog__item">
+                <span class="blog__date">8 ноября</span>
+                <h3 class="blog__subtitle">
+                  Subaru назвал цены на спортивный Forester для Кыргызстана
+                </h3>
+                <div class="blog__text">
+                  Кроссовер Subaru Forester Sport получил спортивный декор и новую систему мониторинга состояния
+                  водителя
+                </div>
+                <a class="blog__link" href="#">
+                  <span>Подробнее</span>
+                  <svg class="blog__link-svg" width="5" height="7">
+                    <use href="images/svg-sprite/sprite.svg#angle-green"></use>
+                  </svg>
+                </a>
+              </li>
+
+              <li class="blog__item">
+                <span class="blog__date">7 ноября</span>
+                <h3 class="blog__subtitle">
+                  Volkswagen представил самый мощный Golf в истории
+                </h3>
+                <div class="blog__text">
+                  Пятидверка получила 2,0-литровую бензиновую... «турбочетверку» ЕА888. Мощность агрегата составляет 320
+                  л.с. и 420 Нм
+                  крутящего момента
+                </div>
+                <a class="blog__link" href="#">
+                  <span>Подробнее</span>
+                  <svg class="blog__link-svg" width="5" height="7">
+                    <use href="images/svg-sprite/sprite.svg#angle-green"></use>
+                  </svg>
+                </a>
+              </li>
+
+              <li class="blog__item">
+                <span class="blog__date">5 ноября</span>
+                <h3 class="blog__subtitle">
+                  Tesla покажет пикап Cybertruck с измененным дизайном до конца 2020
+                </h3>
+                <div class="blog__text">
+                  Илон Маск пообещал показать новую версию пикапа Tesla... Cybertruck, начальный вариант которого
+                  подвергли критике
+                </div>
+                <a class="blog__link" href="#">
+                  <span>Подробнее</span>
+                  <svg class="blog__link-svg" width="5" height="7">
+                    <use href="images/svg-sprite/sprite.svg#angle-green"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="questions">
+      <div class="container">
+        <div class="questions__inner">
+          <div class="questions__text-box">
+            <h3 class="questions__title">У вас остались вопросы?</h3>
+            <div class="questions__text">
+              <p>
+                Заполните форму и мы свяжемся с вами
+                в самое ближайшее время
+              </p>
+            </div>
+          </div>
+
+          <div class="questions__form-box">
+            <form class="questions__form" action="#">
+              <div class="questions__inputs">
+                <input class="questions__input" type="text" placeholder="Ваше имя">
+                <span class="questions__bottom-inputs">
+                  <input type="text" class="questions__bottom-input questions__bottom-input--phone"
+                    placeholder="Номер телефона">
+                  <input type="text" class="questions__bottom-input questions__bottom-input--email"
+                    placeholder="Электронная почта">
+                </span>
+              </div>
+
+              <div class="questions__form-bottom">
+                <label class="questions__label">
+                  <input type="checkbox" class="questions__check" checked>
+                  <span class="questions__checkbox"></span>
+                  <div class="questions__check-text">
+                    <p>
+                      Согласен(а) на обработку <span>персональных данных</span>
+                    </p>
+                  </div>
+                </label>
+
+                <button class="questions__btn" type="submit">Отправить заявку</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq">
+      <div class="container">
+        <div class="faq__inner">
+          <h3 class="faq__title title">Часто задаваемые вопросы</h3>
+          <div class="faq__container">
+            <div id="accordion" class="accordion-container">
+              <div class="accordion-box">
+                <h4 class="accordion-title">Какие гарантии я получаю на приобретаемый автомобиль?</h4>
+                <div class="accordion-content">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio dolor laboriosam laborum
+                    nesciunt nulla perspiciatis praesentium eos doloribus optio odio neque, nisi corrupti natus, iusto
+                    sit voluptas eum in nobis.
+                  </p>
+                </div>
+              </div>
+
+              <div class="accordion-box">
+                <h4 class="accordion-title open">Можно ли забронировать понравившийся автомобиль?</h4>
+                <div class="accordion-content--open">
+                  <p>Вы можете оставить заявку на автомобиль, уточнив его фактическое наличие перед приездом в
+                    автосалон. Чтобы зарезервировать машину, необходимо внести предоплату в автосалоне.
+                  </p>
+                </div>
+              </div>
+
+              <div class="accordion-box">
+                <h4 class="accordion-title">Можно ли вернуть приобретенный автомобиль?</h4>
+                <div class="accordion-content">
+                  <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi obcaecati incidunt suscipit.
+                    Consectetur assumenda voluptatum expedita possimus doloribus deleniti? Pariatur dolores odit nulla
+                    atque tenetur iste, magni blanditiis illo esse.
+                  </p>
+                </div>
+              </div>
+
+              <div class="accordion-box">
+                <h4 class="accordion-title">Сколько времени занимает оформление сделки при выкупе автомобиля?</h4>
+                <div class="accordion-content">
+                  <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio, error cupiditate obcaecati rerum
+                    nulla ullam provident possimus quis similique quia consequuntur! Dolore praesentium magnam fugit aut
+                    a, doloribus quis nobis.
+                  </p>
+                </div>
+              </div>
+
+              <div class="accordion-box">
+                <h4 class="accordion-title">Какую сумму можно получить при подаче заявки на автокредит?</h4>
+                <div class="accordion-content">
+                  <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem, inventore voluptatibus! Ipsa
+                    veritatis
+                    hic provident iste, perferendis cumque esse, modi cum, dolorum quae quos rerum sapiente illo
+                    dignissimos alias deleniti.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="services">
+      <div class="container">
+        <div class="services__inner">
+          <h3 class="services__title title">Сервисный центр</h3>
+          <div class="services__text">
+            <p>
+              Сервисный центр официально сертифицирован автопроизводителем на проведение полного цикла плановых,
+              гарантийных и любых
+              послегарантийных работ, в том числе и кузовного ремонта. На все запасные части и выполненные работы
+              распространяется
+              гарантия. Квалификация персонала подтверждена сертификатами и полностью соответствует высоким стандартам и
+              рекомендациям
+              производителей.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <ul class="footer__inner">
+        <li class="footer__items">
+          <h3 class="footer__title">О компании</h3>
+          <ul class="footer__list">
+            <li class="footer__item">
+              <a class="footer__link" href="contacts.html"> Контакты </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#"> Новости </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#"> Акции </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#"> Миссия </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                Пользовательское соглашение
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="footer__items">
+          <h3 class="footer__title">Услуги</h3>
+          <ul class="footer__list">
+            <li class="footer__item">
+              <a class="footer__link" href="redemtion.html"> Выкуп авто </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="installment.html"> Рассрочка </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="credit.html"> Кредит </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="selection.html"> Автоподбор </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="tradein.html"> Обмен/Trade-in </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="mediator.html">Посредник</a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="footer__items">
+          <h3 class="footer__title">Авто по странам</h3>
+          <ul class="footer__list">
+            <li class="footer__item">
+              <a class="footer__link" href="#"> Японские </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#"> Российские </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#"> Европейские </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#"> Китайские </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#"> Корейские </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Немецкие </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Французские </a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="footer__items">
+          <h3 class="footer__title">Авто по кузову</h3>
+          <ul class="footer__list">
+            <li class="footer__item">
+              <a class="footer__link" href="#"> Седаны </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#"> Хэтчбэки </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#"> Лифтбэки </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#"> Универсалы </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#"> Кроссоверы </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Внедорожники </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Купе </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Пикапы </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Микроавтобусы </a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="footer__items">
+          <h3 class="footer__title">Контакты</h3>
+          <ul class="footer__list">
+            <li class="footer__item">
+              <a class="footer__link" href="tel:+996709000000">
+                0 709 00 00 00
+              </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="tel:+996709000000">
+                0 553 00 00 00
+              </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="tel:+996709000000">
+                0 554 00 00 00
+              </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="mailto:manager@alfamotors.kg"> manager@alfamotors.kg </a>
+            </li>
+            <li class="footer__item footer__item--address">Бишкек, ул. Киевская 356 е</li>
+
+            <ul class="footer__socials">
+              <li class="footer__socials-item">
+                <a class="footer__socials-link footer__socials-link--twitter" href="#">
+                  <img src="images/png/twit.png" alt="twitter">
+                </a>
+              </li>
+              <li class="footer__socials-item">
+                <a class="footer__socials-link footer__socials-link--youtube" href="#">
+                  <img src="images/png/youtube.png" alt="youtube">
+                </a>
+              </li>
+              <li class="footer__socials-item">
+                <a class="footer__socials-link footer__socials-link--fb" href="#">
+                  <img src="images/png/fb.png" alt="facebook">
+                </a>
+              </li>
+              <li class="footer__socials-item">
+                <a class="footer__socials-link footer__socials-link--insta" href="#">
+                  <img src="images/png/insta.png" alt="instagram">
+                </a>
+              </li>
+            </ul>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <div class="footer__bottom">
+      <div class="container">
+        <div class="footer__bottom-inner">
+          <div class="footer__bottom-text">
+            <p>Дизайн: Александр Богачёв</p>
+          </div>
+          <div class="footer__bottom-copy">
+            <p>© 2021 AlfaMotors</p>
+          </div>
+          <div class="footer__bottom-text">
+            <p>Разработка: <a href="mailto:inbox@webex.go.kg">Webex studio</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="js/wow.min.js"></script>
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>
