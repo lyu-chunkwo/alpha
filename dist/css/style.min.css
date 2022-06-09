@@ -15050,31 +15050,36 @@ select:focus {
 .advantages-mediator__input::-webkit-input-placeholder {
   color: #fefefe;
   font-size: 15px;
-  line-height: 1.6
+  line-height: 1.6;
+  opacity: 0.6;
 }
 
 .advantages-mediator__input::-moz-placeholder {
   color: #fefefe;
   font-size: 15px;
-  line-height: 1.6
+  line-height: 1.6;
+  opacity: 0.6;
 }
 
 .advantages-mediator__input:-ms-input-placeholder {
   color: #fefefe;
   font-size: 15px;
-  line-height: 1.6
+  line-height: 1.6;
+  opacity: 0.6;
 }
 
 .advantages-mediator__input::-ms-input-placeholder {
   color: #fefefe;
   font-size: 15px;
-  line-height: 1.6
+  line-height: 1.6;
+  opacity: 0.6;
 }
 
 .advantages-mediator__input::placeholder {
   color: #fefefe;
   font-size: 15px;
-  line-height: 1.6
+  line-height: 1.6;
+  opacity: 0.6;
 }
 
 .used-car {
