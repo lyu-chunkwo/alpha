@@ -9531,7 +9531,7 @@ select:focus {
 }
 
 .slider-hits__item-box:hover .slider-hits__link {
-  color: #073ef2;
+  color: #1AB530;
   -webkit-transition: color 0.5s;
   -o-transition: color 0.5s;
   transition: color 0.5s
